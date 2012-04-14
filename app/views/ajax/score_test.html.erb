@@ -1,0 +1,4 @@
+<div id="lesson" data-lessonid="<%= @lesson.id %>">
+  <h1><%= @lesson.template_name %></h1>
+  <%= render :partial => 'ko_lessons/scored_lesson', :locals => {:lesson => @lesson} %>
+</div>

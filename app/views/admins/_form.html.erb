@@ -1,0 +1,30 @@
+<%= form_for(@admin) do |f| %>
+  <%= render :partial => 'layouts/error_block', :locals => {:obj => @admin} %>
+  <div class="field">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :username, raw("Username:"), :class => "custom_font_bold" %>
+    <%= f.text_field :username, :class => "round" %>
+  </div>
+  <div class="field">
+    <%= f.label :email, raw("Email:"), :class => "custom_font_bold" %>
+    <%= f.text_field :email, :class => "round" %>
+  </div>
+  <div class="field">
+    <%= f.label :password, raw("Password:"), :class => "custom_font_bold" %>
+    <%= f.password_field :password, :class => "round" %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation, raw("Pw Conf:"), :class => "custom_font_bold" %>
+    <%= f.password_field :password_confirmation, :class => "round" %>
+  </div>
+  <div class="field">
+    <%= f.submit "Create Admin", :class => "button blue_button"%>
+  </div>
+<% end %>

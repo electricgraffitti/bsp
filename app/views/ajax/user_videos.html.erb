@@ -1,0 +1,19 @@
+<div id="user_videos_tools">
+	<span id="close_modal_video">Close Video</span>
+	<span id="close_user_video_list">Back to Game</span>
+</div>
+<div id="in_modal_player"></div>
+<% if @user_videos.blank? %>
+	<div class="listed_user_video">
+		<div class="listed_video_content">
+			<header>
+				No Videos available at this time.
+			</header>
+		</div>
+	</div>
+<% else %> 
+	<% @user_videos.each do |user_video| %>
+		<%= render :partial => "user_videos/listed_user_video", :locals => {:user_video => user_video, :video_trigger_type => "in_modal_user_video_trigger"} %>
+		<%= clear %>
+	<% end %>
+<% end %> 
