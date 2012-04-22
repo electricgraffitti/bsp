@@ -9,7 +9,6 @@ gem 'nokogiri', '1.5.0'
 gem 'authlogic'
 gem 'rails3-generators'
 gem 'carrierwave'
-gem 'exception_notification'
 gem 'json'
 gem 'mini_magick'
 gem "fog"
