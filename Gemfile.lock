@@ -116,7 +116,6 @@ GEM
     mime-types (1.18)
     mini_magick (3.4)
       subexec (~> 0.2.1)
-    multi_json (1.2.0)
     multi_xml (0.4.2)
     mysql2 (0.3.11)
     net-scp (1.0.4)
