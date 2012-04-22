@@ -2,27 +2,33 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.3'
 gem 'mysql2'
-gem 'capistrano'
-gem "stripe"
-gem 'nokogiri', '1.5.0'
+gem 'capistrano', '2.5.19'
+gem 'capistrano-ext'
 gem 'authlogic'
-gem 'rails3-generators'
-gem 'carrierwave'
+gem 'aws-s3'
 gem 'json'
+gem "carrierwave"
 gem 'mini_magick'
 gem "fog"
-gem 'aws-s3'
+gem "zencoder"
+gem "stripe"
+gem "createsend"
+
+group :production do
+  gem "exception_notification"
+  gem 'newrelic_rpm'
+end
 
 group :development do
+  gem 'debugger'
+  gem 'thin'
   gem 'rspec-rails'
   gem 'bullet'
   gem 'ruby-growl'
   gem 'xmpp4r'
   gem 'jasmine'
   gem 'zencoder-fetcher'
-  gem "thin"
-  gem 'annotate'
-  gem 'debugger'
+  gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
 end
 
 group :test do
