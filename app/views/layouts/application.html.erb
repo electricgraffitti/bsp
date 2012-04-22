@@ -16,32 +16,47 @@
     <%# Header %>
     <div id="mast_header" class="content_wrapper">
       <div id="hd" class="internal_content_wrapper">
-        <%= link_to "Kos Journey", root_url, :id => "logo" %>
-        <%= render :partial => "layouts/application/main_nav" %>
+        "The Best Educational Film of the Year"
       </div>
     </div>
     <%= clear %>
   
     <%# Main Content %>
-    <div id="mast_bd_white" class="content_wrapper">
-      <div id="ajax_status">
-        <%= image_tag "ajax-loader.gif" %>
-        Loading...
+    <div id="combined_segments">
+
+      <%# Footer (on top to allow for layer stack. for effect %> 
+      <div id="mast_footer" class="content_wrapper">
+        <div id="ft" class="internal_content_wrapper">
+          <%= render :partial => "layouts/application/footer" %>
+        </div>
       </div>
-      <div id="bd" class="content_wrapper">
-        <%= render :partial => 'layouts/player_divs' %>
-        <%= yield %>
-    		<%= clear %>
+
+
+      <div id="cloud1" class="x1"></div>
+      <div id="cloud2" class="x2"></div>
+      <div id="cloud3" class="x3"></div>
+      <div id="mast_bd" class="content_wrapper">
+        <div id="ajax_status">
+          <%= image_tag "ajax-loader.gif" %>
+          Loading...
+        </div>
+        <div id="bd" class="content_wrapper">
+          <header id="header">
+            <h1 id="logo">The Biggest Story Problem</h1>
+            <h2>Why Americas students are failing at math</h2>
+          </header>
+          <div id="main_content_wrapper">
+            <%= render :partial => "layouts/application/main_nav" %>
+            <div id="main_content">
+              <%= yield %>
+            </div>
+          </div>
+      		<%= clear %>
+        </div>
       </div>
+    
     </div>
-  
-    <%# Footer %>
-    <div id="mast_footer" class="content_wrapper">
-      <div id="ft" class="internal_content_wrapper">
-        <%= render :partial => "layouts/application/footer" %>
-      </div>
-    </div>
-    <%= yield :overlays %>
+
     <%= render :partial => "layouts/cdn_scripts" %>
     <%= render :partial => "layouts/application/scripts" %>
     <%= render :partial => "layouts/application/google_analytics" %>

@@ -1,0 +1,53 @@
+/*************************************************************************************************************************************/
+/*********************************************************************************************** KETCHUP ERRORS **********************/
+.ketchup-error{position:absolute;width:auto;}
+.ketchup-error ul{padding:0;margin:0;font-family:Helvetica,Arial,sans-serif;font-size:12px;text-align:left;color:#fff;font-weight:700;background:red;background:rgba(255,0,0,0.9);padding:10px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;list-style:none;line-height:16px;}
+.ketchup-error span{display:block;width:0;height:0;border-left:0 solid transparent;border-right:15px solid transparent;border-top:10px solid red;border-top:10px solid rgba(255,0,0,0.9);border-bottom:0;margin-left:10px;}
+#error_404_page{position:relative;margin:20px auto;width:800px;height:500px;background:url(../images/404.png) 0px 0px no-repeat;}
+#error_500_page{position:relative;margin:20px auto;width:800px;height:500px;background:url(../images/500.png) 0px 0px no-repeat;}
+#mast_header,#mast_banner,#mast_sub_boxes,#mast_footer{position:relative;text-align:center;width:100%;}
+header,#banner,#content,#sub_boxes,footer{position:relative;width:1024px;margin:0px auto;}
+
+/*************************************************************************************************************************************/
+/*************************************************************************************************** jQUERY VALIDATOR ****************/
+.inputContainer{position:relative;float:left;}
+.formError{position:absolute;top:300px;left:300px;display:block;z-index:15000;cursor:pointer;}
+.ajaxSubmit{padding:20px;background:#55ea55;border:1px solid #999;display:none}
+.formError .formErrorContent{width:100%;background:#ee0101;position:relative;z-index:15001;color:#fff;width:150px;font-family:tahoma;font-size:11px;border:2px solid #ddd;box-shadow:0 0 6px #000;-moz-box-shadow:0 0 6px #000;-webkit-box-shadow:0 0 6px #000;padding:4px 10px 4px 10px;border-radius:6px;-moz-border-radius:6px;-webkit-border-radius:6px;}
+.greenPopup .formErrorContent{background:#33be40;}
+.blackPopup .formErrorContent{background:#393939;color:#FFF;}
+.formError .formErrorArrow{width:15px;margin:-2px 0 0 13px;position:relative;z-index:5006;}
+.formError .formErrorArrowBottom{box-shadow:none;-moz-box-shadow:none;-webkit-box-shadow:none;margin:0px 0 0 12px;top:2px;}
+.formError .formErrorArrow div{border-left:2px solid #ddd;border-right:2px solid #ddd;box-shadow:0 2px 3px #444;-moz-box-shadow:0 2px 3px #444;-webkit-box-shadow:0 2px 3px #444;font-size:0px;height:1px;background:#ee0101;margin:0 auto;line-height:0;font-size:0;display:block;}
+.formError .formErrorArrowBottom div{box-shadow:none;-moz-box-shadow:none;-webkit-box-shadow:none;}
+.greenPopup .formErrorArrow div{background:#33be40;}
+.blackPopup .formErrorArrow div{background:#393939;color:#FFF;}
+.formError .formErrorArrow .line10{width:15px;border:none;}
+.formError .formErrorArrow .line9{width:13px;border:none;}
+.formError .formErrorArrow .line8{width:11px;}
+.formError .formErrorArrow .line7{width:9px;}
+.formError .formErrorArrow .line6{width:7px;}
+.formError .formErrorArrow .line5{width:5px;}
+.formError .formErrorArrow .line4{width:3px;}
+.formError .formErrorArrow .line3{width:1px;border-left:2px solid #ddd;border-right:2px solid #ddd;border-bottom:0 solid #ddd;}
+.formError .formErrorArrow .line2{width:3px;border:none;background:#ddd;}
+.formError .formErrorArrow .line1{width:1px;border:none;background:#ddd;}
+
+/*************************************************************************************************************************************/
+/******************************************************************************************************* ERRORS **********************/
+.notification_header{font-size:16px;font-weight:700;color:#ff0000;padding:20px;text-align:center;}
+.notification_header a{color:#0088cc;}
+#flash{display:none;background:none repeat scroll 0 0 #312f2e;color:#FFFFFF;font-size:175%;left:50%;margin-left:-480px;margin-top:0;padding:20px 10px;position:absolute;text-align:center;top:0;width:940px;z-index:210;-webkit-box-shadow:1px 7px 13px #000000;-moz-box-shadow:1px 7px 13px #000000;box-shadow:1px 7px 13px #000000;}
+div.fieldWithErrors input[type="text"]{border:2px solid #CC0000;}
+div.fieldWithErrors label{color:#CC0000;font-weight:bold;}
+#errorExplanation{position:relative;top:0px;left:0%;width:580px;border:2px solid red;padding:7px;padding-bottom:12px;margin-bottom:20px;background-color:#fff;font-weight:bold;}
+#signup_form #errorExplanation h2{text-align:left;text-indent:0px;padding:5px 5px 5px 15px;font-size:125%;margin:-7px;color:#CC0000;width:560px;height:20px;}
+#errorExplanation p{color:#333;margin-bottom:0;padding:5px;float:left;}
+#errorExplanation ul{clear:both;}
+#errorExplanation ul li{font-size:12px;padding-left:10px;}
+/******JS Form Errors********/
+input.error,textarea.error{border:2px solid #DB0404;margin:0px;padding:1px;}
+#notification{color:#DB0404;}
+#signup_form p{position:relative;}
+#submit_error_message{margin-left:10px;position:relative;float:left;padding:9px;color:white;font-weight:500;background:#ff0000;}
+label.error{background:#efefef none repeat scroll 0 0;color:#DB0404;font-size:85%;font-weight:bold;padding:0;position:absolute;top:-3px;left:-5px;width:300px;}

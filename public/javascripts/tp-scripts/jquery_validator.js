@@ -195,7 +195,7 @@
                 methods._saveOptions(form, options);
 
                 // bind all formError elements to close on click
-                $(".formError").on("click", function() {
+                $(".formError").live("click", function() {
                     $(this).fadeOut(150, function() {
 
                         // remove prompt once invisible
@@ -226,26 +226,26 @@
 				if (options.bindMethod == "bind"){
 				
 					// bind fields
-                    form.find("[class*=validate]").not("[type=checkbox]").not("[type=radio]").not(".datepicker").on(options.validationEventTrigger, methods._onFieldEvent);
-                    form.find("[class*=validate][type=checkbox],[class*=validate][type=radio]").on("click", methods._onFieldEvent);
-					form.find("[class*=validate][class*=datepicker]").on(options.validationEventTrigger,{"delay": 300}, methods._onFieldEvent);
+                    form.find("[class*=validate]").not("[type=checkbox]").not("[type=radio]").not(".datepicker").bind(options.validationEventTrigger, methods._onFieldEvent);
+                    form.find("[class*=validate][type=checkbox],[class*=validate][type=radio]").bind("click", methods._onFieldEvent);
+					form.find("[class*=validate][class*=datepicker]").bind(options.validationEventTrigger,{"delay": 300}, methods._onFieldEvent);
 
                     // bind form.submit
-                    form.on("submit", methods._onSubmitEvent);
+                    form.bind("submit", methods._onSubmitEvent);
 				} else if (options.bindMethod == "live") {
                     // bind fields with LIVE (for persistant state)
-                    form.find("[class*=validate]").not("[type=checkbox]").not(".datepicker").on(options.validationEventTrigger, methods._onFieldEvent);
-                    form.find("[class*=validate][type=checkbox]").on("click", methods._onFieldEvent);
-					form.find("[class*=validate][class*=datepicker]").on(options.validationEventTrigger,{"delay": 300}, methods._onFieldEvent);
+                    form.find("[class*=validate]").not("[type=checkbox]").not(".datepicker").live(options.validationEventTrigger, methods._onFieldEvent);
+                    form.find("[class*=validate][type=checkbox]").live("click", methods._onFieldEvent);
+					form.find("[class*=validate][class*=datepicker]").live(options.validationEventTrigger,{"delay": 300}, methods._onFieldEvent);
 
                     // bind form.submit
-                    form.on("submit", methods._onSubmitEvent);
+                    form.live("submit", methods._onSubmitEvent);
 				}
 
                	options.binded = true;
 	
 				if (options.autoPositionUpdate) {
-	    			$(window).on("resize", {
+	    			$(window).bind("resize", {
 						"noAnimation": true, 
 						"formElem": form
 	    				}, methods.updatePromptsPosition);
@@ -263,23 +263,23 @@
             if (options.binded) {
 
                 // unbind fields
-                form.find("[class*=validate]").not("[type=checkbox]").off(options.validationEventTrigger, methods._onFieldEvent);
-                form.find("[class*=validate][type=checkbox],[class*=validate][type=radio]").off("click", methods._onFieldEvent);
+                form.find("[class*=validate]").not("[type=checkbox]").unbind(options.validationEventTrigger, methods._onFieldEvent);
+                form.find("[class*=validate][type=checkbox],[class*=validate][type=radio]").unbind("click", methods._onFieldEvent);
 
                 // unbind form.submit
-                form.off("submit", methods.onAjaxFormComplete);
+                form.unbind("submit", methods.onAjaxFormComplete);
                 
                 // unbind live fields (kill)
-                form.find("[class*=validate]").not("[type=checkbox]").off(options.validationEventTrigger, methods._onFieldEvent);
-                form.find("[class*=validate][type=checkbox]").off("click", methods._onFieldEvent);
+                form.find("[class*=validate]").not("[type=checkbox]").die(options.validationEventTrigger, methods._onFieldEvent);
+                form.find("[class*=validate][type=checkbox]").die("click", methods._onFieldEvent);
                 
 				// unbind form.submit
-                form.off("submit", methods.onAjaxFormComplete);
+                form.die("submit", methods.onAjaxFormComplete);
                 
                 form.removeData('jqv');
 		
 				if (options.autoPositionUpdate) {
-		    		$(window).off("resize", methods.updatePromptsPosition)
+		    		$(window).unbind("resize", methods.updatePromptsPosition)
 				}
            	}
             return this;
