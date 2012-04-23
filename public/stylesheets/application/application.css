@@ -35,13 +35,13 @@ body {overflow: hidden;}
 #header {
 	position: relative;
 	width: 960px;
-	height: 70px;
+	height: 60px;
 	text-indent: -9999em;
 	background: transparent url(../../images/movie_title.png) 0px 0px no-repeat;
 }
 #main_nav {
 	position: absolute;
-	top: 355px;
+	top: 301px;
 	left: 80px;
 	width: 800px;
 }
@@ -72,7 +72,7 @@ body {overflow: hidden;}
 }
 #main_content {
 	position: absolute;
-	top: 394px;
+	top: 341px;
 	left: 77px;
 	width: 800px;
 	background: transparent url(../../images/paper-bg.png) 0px 0px no-repeat;

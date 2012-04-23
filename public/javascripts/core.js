@@ -77,9 +77,9 @@ var Utility = {
   resizeContentContainer: function() {
     var container = $("#main_content");
 
-    container.height($(window).height() - 500);
+    container.height($(window).height() - 440);
     $(window).resize(function() {
-      container.height($(window).height() - 500);
+      container.height($(window).height() - 440);
     });
   },
 
