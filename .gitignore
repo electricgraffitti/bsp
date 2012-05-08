@@ -15,7 +15,5 @@
 /log/*.log
 /tmp
 config/database.yml
-# config/smtp_gmail.yml
 config/app_config.yml
-# config/s3.yml
 
