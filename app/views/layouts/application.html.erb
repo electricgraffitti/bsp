@@ -16,7 +16,7 @@
     <%# Header %>
     <div id="mast_header" class="content_wrapper">
       <div id="hd" class="internal_content_wrapper">
-        "The Best Educational Film of the Year"
+        <%= render :partial => "layouts/application/main_nav" %>
       </div>
     </div>
     <%= clear %>
@@ -41,14 +41,17 @@
           Loading...
         </div>
         <div id="bd" class="content_wrapper">
-          <header id="header">
-            <h1 id="logo">The Biggest Story Problem</h1>
-            <h2>Why Americas students are failing at math</h2>
-          </header>
           <div id="main_content_wrapper">
-            <%= render :partial => "layouts/application/main_nav" %>
+            <div id="left_hand"></div>
+            <div id="right_hand"></div>
             <div id="main_content">
-              <%= yield %>
+              <aside id="sidebar">
+                <%= yield :sidebar %>
+              </aside>
+              <div id="main_section"> <%# This is 585x329 for 16:9 %>
+                <%= yield %>
+              </div>
+              <footer id="main_content_footer"><%= link_to "An Imagine Education Production", "http://imagineeducation.org", :target => "_blank" %></footer>
             </div>
           </div>
       		<%= clear %>

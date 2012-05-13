@@ -71,17 +71,23 @@ var Utility = {
     $(window).resize(function() {
       content.height($(window).height() - header.outerHeight());
     });
-
   },
 
   resizeContentContainer: function() {
-    var container = $("#main_content");
+    var container = $("#main_content"),
+        sideBar = $("#sidebar"),
+        mainContent = $("#main_section");
 
-    container.height($(window).height() - 440);
+    container.height($(window).height() - 336);
+    sideBar.height($("#main_content").height());
+    mainContent.height($("#main_content").height());
+    Utility.resizeSidebar
     $(window).resize(function() {
-      container.height($(window).height() - 440);
+      container.height($(window).height() - 336);
+      sideBar.height($("#main_content").height());
+      mainContent.height($("#main_content").height());
     });
-  },
+  }
 
 };
 
@@ -107,7 +113,7 @@ var Video = {
   },
 
   setupVideoPanelHtml: function() {
-    var videoPanel = $('<div id="video_player" class="hidden"><video id="demo_reel_video" class="video-js vjs-default-skin" controls preload="auto" width="960" height="540" poster="" data-setup="{}"><source src="" type="video/mp4"></video></div>');
+    var videoPanel = $('<div id="video_player" class="hidden"><video id="demo_reel_video" class="video-js vjs-default-skin" controls preload="auto" width="585" height="329" poster="" data-setup="{}"><source src="" type="video/mp4"></video></div>');
     return videoPanel;
   },
 
