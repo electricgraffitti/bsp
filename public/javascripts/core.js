@@ -125,8 +125,8 @@ var Video = {
           playerHtml = $("#video_player");
 
       playerHtml.removeClass("hidden");
-      player.width(780);
-      player.height(439);
+      player.width(585);
+      player.height(329);
       player.play();
 
     });
