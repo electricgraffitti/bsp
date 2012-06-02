@@ -45,13 +45,11 @@
             <div id="left_hand"></div>
             <div id="right_hand"></div>
             <div id="main_content">
-              <aside id="sidebar">
-                <%= yield :sidebar %>
-              </aside>
-              <div id="main_section"> <%# This is 585x329 for 16:9 %>
+              <div id="main_section"> <%# This is 580x326 for 16:9 %>
+                <header id="content_header">Why America's Students Are Failing At Math</header>
                 <%= yield %>
               </div>
-              <footer id="main_content_footer"><%= link_to "An Imagine Education Production", "http://imagineeducation.org", :target => "_blank" %></footer>
+              <footer id="main_content_footer"></footer>
             </div>
           </div>
       		<%= clear %>
