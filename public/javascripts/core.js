@@ -113,7 +113,7 @@ var Video = {
   },
 
   setupVideoPanelHtml: function() {
-    var videoPanel = $('<div id="video_player" class="hidden"><video id="demo_reel_video" class="video-js vjs-default-skin" controls preload="auto" width="585" height="329" poster="" data-setup="{}"><source src="" type="video/mp4"></video></div>');
+    var videoPanel = $('<div id="video_player" class="hidden"><video id="demo_reel_video" class="video-js vjs-default-skin" controls preload="auto" width="580" height="326" poster="" data-setup="{}"><source src="" type="video/mp4"></video></div>');
     return videoPanel;
   },
 
@@ -125,8 +125,8 @@ var Video = {
           playerHtml = $("#video_player");
 
       playerHtml.removeClass("hidden");
-      player.width(585);
-      player.height(329);
+      player.width(580);
+      player.height(326);
       player.play();
 
     });
