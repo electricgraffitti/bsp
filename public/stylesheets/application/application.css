@@ -74,7 +74,7 @@ body {overflow: hidden;}
 #right_hand {position: absolute; width: 90px; height: 140px; top: 430px; right: -40px; background: transparent url(../../images/right_hand.png) 0px 0px repeat-x;z-index: 10;}
 #main_content {
 	position: absolute;
-	top: 377px;
+	top: 336px;
 	left: 0px;
 	width: 600px;
 	background: transparent url(../../images/paper-bg.png) 0px 0px no-repeat;
@@ -100,8 +100,7 @@ body {overflow: hidden;}
 }
 #demo_reel {
 	position: relative;
-	width: 585px;
-	height: 326px;
+	float:left;
 }
 #demo_reel img {margin: 15px 11px;}
 
