@@ -1,2 +1,25 @@
-<h1>Pages#contact</h1>
-<p>Find me in app/views/pages/contact.html.erb</p>
+<section id="contact" class="content">
+	<header>Contact us for more information</header>
+	<%= form_tag new_contact_path do %>
+		<%= hidden_field_tag :captcha %>
+		<div class="field">
+			<%= label_tag "First Name" %><br/>
+			<%= text_field_tag :first_name %>
+		</div>
+		<div class="field">
+			<%= label_tag "Last Name" %><br/>
+			<%= text_field_tag :last_name %>
+		</div>
+		<div class="field">
+			<%= label_tag "Email" %><br/>
+			<%= text_field_tag :email %>
+		</div>
+		<div class="field">
+			<%= label_tag "Comments" %><br/>
+			<%= text_area_tag :comments %>
+		</div>
+		<div class="field action">
+			<%= submit_tag "Contact Us", :class => "button blue_button" %>
+		</div>
+	<% end %>
+</section>

@@ -1,10 +1,12 @@
 class AppMailer < ActionMailer::Base
   default from: "support@kosjourney.com"
 
-  def welcome_email(teacher, charge_obj)
-    @teacher = teacher
-    @charge = charge_obj
-    mail(:to => "#{@teacher.name} <#{@teacher.email}>", :subject => "Welcome to Ko's Journey!")
+  def contact_email(params)
+    @first_name = params[:first_name]
+    @last_name = params[:last_name]
+    @email = params[:email]
+    @comments = params[:comments]
+    mail(:to => "Jennifer Lightwood Harris Laidlaw Ortega Hanson Finn the Third <jennifer@imagineeducation.org>", :subject => "Biggest Story Problem Submission")
   end
 
 end

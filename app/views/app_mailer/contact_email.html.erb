@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>KosJourney Welcome Email</title>
+    <title>Biggest Story Problem Contact Submission</title>
   </head>
 
   <body>
@@ -26,9 +26,8 @@
               <tbody>
                 <tr>
                   <td style="width: 600px;" width="600">
-                    <h1 style="font-family: helvetica,arial,sans-serif; margin-left: 0px; font-weight: 100; color: #000000; font-size: 33px; line-height: 33px; text-align: center">Welcome to Ko's Journey<br />    
+                    <h1 style="font-family: helvetica,arial,sans-serif; margin-left: 0px; font-weight: 100; color: #000000; font-size: 33px; line-height: 33px; text-align: center">Biggest Story Problem - Contact Submission<br />    
                     </h1>
-                    <img style="border: none; margin-top: 20px;" src="http://dl.dropbox.com/u/3105141/C2CDN/Ko/graphics/email/purple_splat.png" width="628" height="20" />
                   </td>
                 </tr> 
               </tbody>
@@ -44,23 +43,11 @@
                       <tbody>
                         <tr>
                           <td>
-                            <p style="font-family: helvetica,arial,sans-serif; font-size: 12px; margin-top: 25px; margin-right: 50px; margin-left: 40px; color: #5f6062">
-                           		You signed up for Ko's Journey with the email address <%= @teacher.email %>. Your credit card will be billed the amount of <%= number_to_currency(Currency.calculate_cents_to_dollars(@charge.amount)) %>.
-                            </p>
-                            <p style="font-family: helvetica,arial,sans-serif; font-size: 12px; margin-top: 25px; margin-right: 50px; margin-left: 40px; color: #5f6062">
-                            	As the administrator of this account, your next step is to navigate to the URL listed below, login with your assigned login and chosen password and create accounts for your teachers and/or students. You can purchase more student or teacher credits at any time from inside your account. 
-                            </p>
-                            <p style="font-family: helvetica,arial,sans-serif; font-size: 12px; margin-top: 25px; margin-right: 50px; margin-left: 40px; color: #5f6062">
-                            	To login in again in the future, please return to the following URL and use the email address and password you used to create your account (also listed below):
-                            </p>
-                            <p style="font-family: helvetica,arial,sans-serif; font-size: 12px; margin-top: 25px; margin-right: 50px; margin-left: 40px; color: #5f6062">
-                            	URL: http://www.kosjourney.com/login
-                            </p>
-                            <p style="font-family: helvetica,arial,sans-serif; font-size: 12px; margin-top: 25px; margin-right: 50px; margin-left: 40px; color: #5f6062">
-                            	Login: <%= @teacher.login %> - Password: <%= @teacher.teacher_key %>
-                            </p>
                             <p style="font-family: helvetica,arial,sans-serif; font-size: 10px; margin-top: 25px; margin-right: 50px; margin-left: 40px; color: #bbbbbb">
-                            	* Please save or print this email for future reference. If you have any questions or technical issues, please don't hesitate to contact support@kosjourney.com. 
+                              First Name: <%= @first_name %><br/>
+                              Last Name: <%= @last_name %><br/>
+                              Email: <%= @email %><br/>
+                              Comments: <%= @comments %>
                             </p>
                           </td>
                         </tr>
@@ -81,7 +68,7 @@
         <tr>
           <td style="text-align: right; height: 30px;">
             <a style="font-family: helvetica,arial,sans-serif; font-size: 14px; color: #0078ae" href="http://www.kosjourney.com">
-              www.kosjourney.com
+              www.thebiggeststoryproblem.com
             </a>
           </td>
         </tr>
