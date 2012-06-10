@@ -64,28 +64,28 @@ var Utility = {
 
   resizeMainView: function() {
     var header = $("#hd"),
+        main_content = $("#main_content_wrapper"),
         content = $("#combined_segments");
 
+    main_content.height($(window).height() - header.outerHeight());   
     content.height($(window).height() - header.outerHeight());
 
     $(window).resize(function() {
+      main_content.height($(window).height() - header.outerHeight());
       content.height($(window).height() - header.outerHeight());
     });
   },
 
   resizeContentContainer: function() {
     var container = $("#main_content"),
-        sideBar = $("#sidebar"),
         mainContent = $("#main_section");
 
     container.height($(window).height() - 336);
-    sideBar.height($("#main_content").height());
-    mainContent.height($("#main_content").height());
+    mainContent.height($("#main_content").height() - 80);
     Utility.resizeSidebar
     $(window).resize(function() {
       container.height($(window).height() - 336);
-      sideBar.height($("#main_content").height());
-      mainContent.height($("#main_content").height());
+      mainContent.height($("#main_content").height() - 80);
     });
   }
 
@@ -117,20 +117,42 @@ var Video = {
     return videoPanel;
   },
 
+  setupModalVideoPanelHtml: function() {
+    var videoPanel = $('<div id="modal_video_player" class="hidden"><video id="modal_video" class="video-js vjs-default-skin" controls preload="auto" width="580" height="326" poster="" data-setup="{}"><source src="" type="video/mp4"></video></div>');
+    return videoPanel;
+  },
+
   setupTriggers: function() {
     var triggers = $(".video_trigger");
 
     triggers.on("click", function() {
-      var player = _V_("demo_reel_video");
-          playerHtml = $("#video_player");
+      Video.playVideo();
+    });
+  },
+
+  playVideo: function() {
+    var player = _V_("demo_reel_video");
+        playerHtml = $("#video_player");
 
       playerHtml.removeClass("hidden");
       player.width(580);
       player.height(326);
       player.play();
+  },
 
-    });
+  playModalVideo: function() {
+    var player = _V_("modal_video");
+        playerHtml = $("#modal_video_player");
 
+      playerHtml.removeClass("hidden");
+      player.width(580);
+      player.height(326);
+      player.play();
+  },
+
+  stopVideo: function () {
+    var player = _V_("demo_reel_video");
+    player.pause();
   }
 
 };

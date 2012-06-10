@@ -1,13 +1,13 @@
 <section id="contact" class="content">
-	<header>Contact us for more information</header>
+	<header>Contact Us</header>
 	<%= form_tag new_contact_path do %>
 		<%= hidden_field_tag :captcha %>
 		<div class="field">
-			<%= label_tag "First Name" %><br/>
+			<label>First Name</label><br/>
 			<%= text_field_tag :first_name %>
 		</div>
 		<div class="field">
-			<%= label_tag "Last Name" %><br/>
+			<label>Last Name</label><br/>
 			<%= text_field_tag :last_name %>
 		</div>
 		<div class="field">
@@ -17,6 +17,10 @@
 		<div class="field">
 			<%= label_tag "Comments" %><br/>
 			<%= text_area_tag :comments %>
+		</div>
+		<div class="field form_links">
+			<div>For more information: <a href="/downloads/Press Kit - The Biggest Story Problem.pdf", title="The Biggest Story Problem - Press Kit" target="_blank">Press Materials</a></div>
+			<div>Like us on <a href="http://www.facebook.com/TheBiggestStoryProblem" title="The Biggest Story Problem on Facebook">Facebook</a></div>
 		</div>
 		<div class="field action">
 			<%= submit_tag "Contact Us", :class => "button blue_button" %>

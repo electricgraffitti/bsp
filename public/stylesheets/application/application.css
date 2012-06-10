@@ -15,7 +15,7 @@
 	margin: 0px auto;
 	height: 10px;
 	padding: 10px 0px 19px;
-	width: 757px;
+	width: 600px;
 	color: #CDD2DA;
 	font-size: 16px;
 	font-weight: 700;
@@ -41,16 +41,18 @@ body {overflow: hidden;}
 }
 #main_nav {
 	position: relative;
-	width: 800px;
+	width: 600px;
 	margin: 0px auto;
 	float:none;
 }
 #main_nav li {
 	position: relative;
 	float:left;
-	width: 184px;
+	width: 140px;
 	text-align: center;
 }
+#main_nav li.home {width: 72px;}
+#main_nav li.trailer {width: 108px;}
 #main_nav li a {
 	position: relative;
 	display:block;
@@ -67,7 +69,7 @@ body {overflow: hidden;}
 	position: relative;
 	float:left;
 	width: 600px;
-	min-height: 650px;
+	height: 100%;
 	background: transparent url(../../images/bsp-content-bg-600.png) 0px 0px no-repeat;
 }
 #left_hand {position: absolute; width: 90px; height: 140px; top: 430px; left: -38px; background: transparent url(../../images/left-hand.png) 0px 0px repeat-x; z-index: 10;}
@@ -78,9 +80,10 @@ body {overflow: hidden;}
 	left: 0px;
 	width: 600px;
 	background: transparent url(../../images/paper-bg.png) 0px 0px no-repeat;
+	border-top: 1px solid #6E5F44;
 }
 #sidebar {position: relative; float:left; border-right: 1px solid #ac8a57; width: 195px; min-height: 400px;}
-#main_section {position: relative; float:left; width: 600px; min-height: 400px;}
+#main_section {position: relative; float:left; width: 600px; min-height: 300px; overflow-y: auto;overflow-x: hidden;}
 #main_content_footer {position: absolute; width: 600px; height: 20px; font-size:13px; bottom: 0px; left: 0px; text-align: center; color: #6a6450; background: transparent url(../../images/paper-bg.png) 0px 0px no-repeat;}
 #main_content_footer a {color: #6a6450; font-family: serif;text-decoration: none;}
 #main_content_footer a:hover {color: #6a6450;}
@@ -90,6 +93,15 @@ body {overflow: hidden;}
 	height: 200px;
 	width: 100%;
 	background: transparent url(../../images/city-scape.png) 0px 0px repeat-x;
+}
+#main_footer {
+	position: fixed;
+	bottom: 0px;
+	left: 50%;
+	margin-left: -300px;
+	width: 600px;
+	height: 40px;
+	background: transparent url(../../images/paper-bg.png) 0px 0px no-repeat;
 }
 #video_section {
 	position: relative;
@@ -104,6 +116,9 @@ body {overflow: hidden;}
 }
 #demo_reel img {margin: 15px 11px;}
 
+#expose {position: absolute; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); z-index: 1000; top: 0px; left: 0px;}
+#player_window {position: absolute; top: 50%; left: 50%; width: 600px; height: 360px; margin-top: -180px; margin-left: -300px; background: #ffffff;z-index: 1001;}
+#close_link {position: absolute; top: -15px; right: -20px; background: url(../../images/close.png); width: 28px; height: 28px;cursor: pointer;}
 
 .sub_section, {position: relative; float: left; width: 600px;}
 .sub_section article {position: relative; float: left; width: 390px; padding: 10px; border-right: 1px solid #6E5F44;}
@@ -118,24 +133,25 @@ body {overflow: hidden;}
 	float: left;
 	margin-top: 20px;
 	padding: 0px 50px;
-	width: 500px;
+	width: 485px;
 }
-.content header {font-size: 24px; font-weight: 700; margin-bottom: 20px;}
+.content header {width: 485px;font-size: 24px; font-weight: 700; margin-bottom: 20px;}
 .content .column {
 	position: relative;
 	float: left;
-	width: 250px;
+	width: 230px;
 }
 .content .column.first {
-	width: 230px;
-	padding-right: 20px;
+	padding-right: 25px;
 }
 .full_width {width: 500px; margin-top: 20px;float:left;}
 .content p {
+	text-indent: 25px;
 	font-size: 14px;
 	line-height: 19px;
 	margin: 0px 0px 10px;
 }
+.content div {font-size: 14px;}
 .content p a {
 	/*color: #0088cc;*/
 }
@@ -143,14 +159,22 @@ body {overflow: hidden;}
 #contact .field {
 	position: relative;
 	float: left;
-	width: 230px;
+	width: 225px;
 }
+#contact .field.form_links {
+	margin-top: -50px;
+}
+#contact .field.form_links div {padding-bottom: 10px;}
 #contact .field.action {
 	margin-top: 20px;
+	float:right;
 }
 #contact .field input,
 #contact .field select,
 #contact .field textarea {width: 210px;}
+#contact .field textarea {height: 80px;}
+img#students, img#cover {padding: 5px; border: 1px solid #6E5F44; margin: 0px 0px 10px;}
+img#cover {margin: 10px 0px 0px;}
 /*************************************************************************************************************************************/
 /*************************************************************************************************** CLOUDS **************************/
 /*Time to animate*/

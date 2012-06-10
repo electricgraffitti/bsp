@@ -139,7 +139,7 @@ footer{height:62px;width:100%;}
 .internal_content_wrapper{position:relative;width:960px;margin:0px auto;}
 #bd{min-height:425px;width:600px;margin:0px auto;text-align:left;}
 .content_segment{position:relative;float:left;width:100%;padding-bottom:20px;}
-#content_header {font: 700 28px "Times New Roman", Times, serif;text-align: center;width: 600px;color: #7D2326;border-top: 1px solid #6E5F44;padding-top: 6px;}
+#content_header {font: 700 28px "Times New Roman", Times, serif;text-align: center;width: 600px;color: #7D2326;padding-top: 6px;}
 
 /*************************************************************************************************************************************/
 /*************************************************************************************************** NAVIGATION **********************/
