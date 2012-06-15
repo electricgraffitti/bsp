@@ -13,8 +13,8 @@ body,button,input,select,textarea{font-family:sans-serif;color:#222;}
 #player ::selection,#game_window ::selection{background:black;background:transparent;}
 :focus{/*border:1px solid #7878CC;*/}
 #player :focus,#game_window :focus{border:none;}
-a{color:#fff;}
-a:visited{color:#fff;}
+a{color:#0088cc;}
+a:visited{color:#0088cc;}
 a:hover{color:#0088cc;}
 a:focus{outline:thin dotted;}
 a:hover,a:active{outline:0;}
@@ -139,8 +139,9 @@ footer{height:62px;width:100%;}
 .internal_content_wrapper{position:relative;width:960px;margin:0px auto;}
 #bd{min-height:425px;width:600px;margin:0px auto;text-align:left;}
 .content_segment{position:relative;float:left;width:100%;padding-bottom:20px;}
-#content_header {font: 700 28px "Times New Roman", Times, serif;text-align: center;width: 600px;color: #7D2326;padding-top: 6px;}
-
+.highlighted_text {font: 700 28px "Times New Roman", Times, serif;text-align: center;width: 600px;color: #7D2326;padding-top: 6px;}
+.highlighted_text a {color: #7D2326; text-decoration: none;}
+.highlighted_text a:hover {color:#0088cc; text-decoration: underline;}
 /*************************************************************************************************************************************/
 /*************************************************************************************************** NAVIGATION **********************/
 ul.nav,ul.nav li{position:relative;float:left;margin-top:1px;}

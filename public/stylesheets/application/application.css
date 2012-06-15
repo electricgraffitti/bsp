@@ -76,11 +76,11 @@ body {overflow: hidden;}
 #right_hand {position: absolute; width: 90px; height: 140px; top: 430px; right: -40px; background: transparent url(../../images/right_hand.png) 0px 0px repeat-x;z-index: 10;}
 #main_content {
 	position: absolute;
-	top: 336px;
+	top: 346px;
 	left: 0px;
 	width: 600px;
 	background: transparent url(../../images/paper-bg.png) 0px 0px no-repeat;
-	border-top: 1px solid #6E5F44;
+	/*border-top: 1px solid #6E5F44;*/
 }
 #sidebar {position: relative; float:left; border-right: 1px solid #ac8a57; width: 195px; min-height: 400px;}
 #main_section {position: relative; float:left; width: 600px; min-height: 300px; overflow-y: auto;overflow-x: hidden;}
@@ -102,6 +102,7 @@ body {overflow: hidden;}
 	width: 600px;
 	height: 40px;
 	background: transparent url(../../images/paper-bg.png) 0px 0px no-repeat;
+	font-size: 18px;
 }
 #video_section {
 	position: relative;
@@ -117,7 +118,7 @@ body {overflow: hidden;}
 #demo_reel img {margin: 15px 11px;}
 
 #expose {position: absolute; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); z-index: 1000; top: 0px; left: 0px;}
-#player_window {position: absolute; top: 50%; left: 50%; width: 600px; height: 360px; margin-top: -180px; margin-left: -300px; background: #ffffff;z-index: 1001;}
+#player_window {position: absolute; padding-top: 109px;top: 276px; left: 50%; width: 600px; height: 360px; margin-left: -300px; background: transparent url(../../images/video_modal_bg.png) 0px 0px no-repeat; z-index: 1001;}
 #close_link {position: absolute; top: -15px; right: -20px; background: url(../../images/close.png); width: 28px; height: 28px;cursor: pointer;}
 
 .sub_section, {position: relative; float: left; width: 600px;}
@@ -150,8 +151,9 @@ body {overflow: hidden;}
 	font-size: 14px;
 	line-height: 19px;
 	margin: 0px 0px 10px;
+	text-align: justify;
 }
-.content div {font-size: 14px;}
+.content div {font-size: 13px;}
 .content p a {
 	/*color: #0088cc;*/
 }
@@ -173,8 +175,11 @@ body {overflow: hidden;}
 #contact .field select,
 #contact .field textarea {width: 210px;}
 #contact .field textarea {height: 80px;}
-img#students, img#cover {padding: 5px; border: 1px solid #6E5F44; margin: 0px 0px 10px;}
-img#cover {margin: 10px 0px 0px;}
+img#students, img#cover {margin-bottom: 10px;}
+img#cover {margin: 3px 0px 0px;}
+
+.facebook_link, .facebook_link span, .fb-like {position: relative; float: left;}
+.facebook_link span {display: inline-block; margin-right: 5px;}
 /*************************************************************************************************************************************/
 /*************************************************************************************************** CLOUDS **************************/
 /*Time to animate*/

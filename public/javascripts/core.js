@@ -125,8 +125,11 @@ var Video = {
   setupTriggers: function() {
     var triggers = $(".video_trigger");
 
-    triggers.on("click", function() {
-      Video.playVideo();
+    triggers.on("click", function(e) {
+      //Video.playVideo();
+      e.preventDefault();
+      //Video.stopVideo();
+      VidPlayer.launchModalPlayer();
     });
   },
 

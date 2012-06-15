@@ -21,5 +21,12 @@
 <title><%= @page_title ? "#{@page_title} | #{APP['app_name']}" : APP['app_name'] %></title>
 <%= stylesheet_link_tag 'core', 'errors', 'html5videoplayer', 'application/application' %>
 <%= yield :headmeta %>
-
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <%= javascript_include_tag "tp-scripts/preload" %>

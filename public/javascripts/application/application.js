@@ -21,11 +21,10 @@ var Navigation = {
 var VidPlayer = {
 
   initTrailerLink: function() {
-    var playTrailerLink = $("#play_trailer");
+    var playTrailerLink = $(".play_trailer");
 
     playTrailerLink.on("click", function(e) {
       e.preventDefault();
-      Video.stopVideo();
       VidPlayer.launchModalPlayer();
     });
   },

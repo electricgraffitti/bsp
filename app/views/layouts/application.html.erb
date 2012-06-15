@@ -46,7 +46,7 @@
             <div id="right_hand"></div>
             <div id="main_content">
               <div id="main_section"> <%# This is 580x326 for 16:9 %>
-                <header id="content_header">Why America's Students Are Failing At Math</header>
+                <header id="content_header" class="highlighted_text">Why America's Students Are Failing At Math</header>
                 <%= yield %>
               </div>
               <footer id="main_content_footer"></footer>
@@ -57,8 +57,8 @@
       </div>
     
     </div>
-    <footer id="main_footer">
-      <%= image_tag "ie-footer.png" %>
+    <footer id="main_footer" class="highlighted_text">
+      <%= link_to "An Imagine Education Production", "http://www.imagineeducation.org", :target => "_blank" %>
     </footer>
     <%= render :partial => "layouts/cdn_scripts" %>
     <%= render :partial => "layouts/application/scripts" %>
