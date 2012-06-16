@@ -88,7 +88,6 @@ var Utility = {
       mainContent.height($("#main_content").height() - 80);
     });
   }
-
 };
 
 var Video = {
@@ -109,7 +108,6 @@ var Video = {
     playerWrapper.append(player);
 
     Video.setupTriggers();
-
   },
 
   setupVideoPanelHtml: function() {

@@ -1,0 +1,49 @@
+development:
+ # Stripe API Key TEST Keys
+ stripe_key: NVLzMHliSHztG50SWkIXpAj0e1WiUPd2
+ stripe_publish_key: pk_F5Gt8UwgvjDRv5hhbPbxeWdk3OKQE
+
+ app_name: The Biggest Story Problem | Why America's Students are Failing at Math
+ from_email: support@kosjourney.com
+
+ # Campaign Monitor API Key
+ campaign_monitor_key: 85c49986ad5ed1c27386801fc8497d79
+
+ # Campaign Monitor Lists
+ newsletter_list: 82be659fee0c5c701a9b980056f96abf
+
+ # Zencoder API Key
+ zencoder_key: 5419d90a185e5a73f823e4409f2465bb
+
+staging:
+ # Stripe API Key TEST Keys
+ stripe_key: NVLzMHliSHztG50SWkIXpAj0e1WiUPd2
+ stripe_publish_key: pk_F5Gt8UwgvjDRv5hhbPbxeWdk3OKQE
+
+ app_name: The Biggest Story Problem | Why America's Students are Failing at Math
+ from_email: support@kosjourney.com
+
+ # Campaign Monitor API Key
+ campaign_monitor_key: 85c49986ad5ed1c27386801fc8497d79
+
+ # Campaign Monitor Lists
+ newsletter_list: 82be659fee0c5c701a9b980056f96abf
+
+ # Zencoder API Key
+ zencoder_key: 5419d90a185e5a73f823e4409f2465bb
+
+production:
+ # Stripe API Key LIVE Keys
+ stripe_key: Tj0QFidoIGEVQMsZ5Tjoz4bJRMiZ2hBw
+ stripe_publish_key: pk_7tp6YKvD1fjOp684SPnlBcQVE5PGH
+ app_name: The Biggest Story Problem | Why America's Students are Failing at Math
+ from_email: support@kosjourney.com
+
+ # Campaign Monitor API Key
+ campaign_monitor_key: 85c49986ad5ed1c27386801fc8497d79
+
+ # Campaign Monitor Lists
+ newsletter_list: 82be659fee0c5c701a9b980056f96abf
+
+ # Zencoder API Key
+ zencoder_key: 5419d90a185e5a73f823e4409f2465b

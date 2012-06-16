@@ -37,9 +37,18 @@ var VidPlayer = {
     videoPlayer.find("source").attr("src", "https://s3.amazonaws.com/imagineassets/generalvideos/bsp_demo_reel_2.mp4");
     playerWindow.append(videoPlayer);
     expose.append(playerWindow);
-    $("body").append(expose);
+    VidPlayer.injectPlayer(playerWindow, expose);
     Video.playModalVideo();
     VidPlayer.closeVideoModal();
+  },
+
+  injectPlayer: function(playerWindow, expose) {
+    if ($(window).height() < 1024) {
+      playerWindow.addClass("dynamic_height");
+      $("body").append(expose);
+    } else {
+      $("body").append(expose);
+    }
   },
 
   closeVideoModal: function(attribute){
