@@ -49,20 +49,19 @@
                 <header id="content_header" class="highlighted_text">Why America's Students Are Failing At Math</header>
                 <%= yield %>
               </div>
-              <footer id="main_content_footer"></footer>
+              <footer id="main_footer" class="highlighted_text">
+                <%= link_to "An Imagine Education Production", "http://www.imagineeducation.org", :target => "_blank" %>
+              </footer>
             </div>
+            <%= clear %>
           </div>
-      		<%= clear %>
         </div>
+        <%= clear %>
       </div>
-    
+      <%= clear %>
     </div>
-    <footer id="main_footer" class="highlighted_text">
-      <%= link_to "An Imagine Education Production", "http://www.imagineeducation.org", :target => "_blank" %>
-    </footer>
     <%= render :partial => "layouts/cdn_scripts" %>
     <%= render :partial => "layouts/application/scripts" %>
     <%= render :partial => "layouts/application/google_analytics" %>
   </body>
-
 </html>

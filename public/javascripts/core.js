@@ -64,14 +64,14 @@ var Utility = {
 
   resizeMainView: function() {
     var header = $("#hd"),
-        main_content = $("#main_content_wrapper"),
+        mainContent = $("#bd"),
         content = $("#combined_segments");
 
-    main_content.height($(window).height() - header.outerHeight());   
+    mainContent.height($(window).height() - header.outerHeight());
     content.height($(window).height() - header.outerHeight());
 
     $(window).resize(function() {
-      main_content.height($(window).height() - header.outerHeight());
+      mainContent.height($(window).height() - header.outerHeight());
       content.height($(window).height() - header.outerHeight());
     });
   },
@@ -305,5 +305,5 @@ $(document).ready(function() {
   Flash.setFlash();
   App.initDeleteLinks();
   Utility.resizeMainView();
-  Utility.resizeContentContainer();
+  //Utility.resizeContentContainer();
 });

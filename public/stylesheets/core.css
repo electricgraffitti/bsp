@@ -5,7 +5,7 @@ audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
 audio:not([controls]) { display: none; }
 [hidden] { display: none; }
 
-html{font-size:100%;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
 body{margin:0;font-size:13px;line-height:1.231;}
 body,button,input,select,textarea{font-family:sans-serif;color:#222;}
 ::-moz-selection{background:#998de0;color:#fff;text-shadow:none;}
@@ -137,7 +137,7 @@ footer{height:62px;width:100%;}
 /*************************************************************************************************** CONTENT SEGMENTS ****************/
 .content_wrapper{position:relative;width:100%;text-align:center;}
 .internal_content_wrapper{position:relative;width:960px;margin:0px auto;}
-#bd{min-height:425px;width:600px;margin:0px auto;text-align:left;}
+#bd{margin:0px auto;text-align:left;overflow-y: scroll; overflow-x: hidden;}
 .content_segment{position:relative;float:left;width:100%;padding-bottom:20px;}
 .highlighted_text {font: 700 28px "Times New Roman", Times, serif;text-align: center;width: 600px;color: #7D2326;padding-top: 6px;}
 .highlighted_text a {color: #6A6450; text-decoration: none;}
