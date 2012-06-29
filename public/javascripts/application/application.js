@@ -63,7 +63,7 @@ var VidPlayer = {
 
 //**********Initialize Document**********//
 $(document).ready(function() {
-  Ajax.ajaxStatus();
+  //Ajax.ajaxStatus();
   Navigation.setCurrentNav();
   VidPlayer.initTrailerLink();
 });

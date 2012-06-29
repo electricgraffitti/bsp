@@ -102,10 +102,10 @@ body {overflow: hidden;}
 	background: transparent url(../../images/city-scape.png) 0px 0px repeat-x;
 }
 #main_footer {
-	position: fixed;
+	position: absolute;
 	bottom: 0px;
 	left: 50%;
-	margin-left: -308px;
+	margin-left: -300px;
 	width: 600px;
 	height: 40px;
 	background: transparent url(../../images/paper-bg.png) 0px 0px no-repeat;
@@ -125,6 +125,7 @@ body {overflow: hidden;}
 #demo_reel img {margin: 15px 11px;}
 
 #expose {position: absolute; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); z-index: 1000; top: 0px; left: 0px;}
+.ie8 #expose {background-color: #000000;}
 #player_window {position: absolute; padding-top: 109px;top: 276px; left: 50%; width: 600px; height: 360px; margin-left: -300px; background: transparent url(../../images/video_modal_bg.png) 0px 0px no-repeat; z-index: 1001;}
 #player_window.dynamic_height {top: 50%; margin-top: -235px;}
 #close_link {position: absolute; top: -15px; right: -20px; background: url(../../images/close.png); width: 28px; height: 28px;cursor: pointer;}

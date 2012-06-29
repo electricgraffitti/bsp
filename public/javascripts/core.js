@@ -77,15 +77,15 @@ var Utility = {
   },
 
   resizeContentContainer: function() {
-    var container = $("#main_content"),
-        mainContent = $("#main_section");
 
-    container.height($(window).height() - 336);
-    mainContent.height($("#main_content").height() - 80);
-    Utility.resizeSidebar
+    if ($("#main_content").outerHeight() < ($("#mast_bd").height() - 346)){
+      $("#main_content").height($("#mast_bd").height() - 346);
+    }    
+
     $(window).resize(function() {
-      container.height($(window).height() - 336);
-      mainContent.height($("#main_content").height() - 80);
+      if ($("#main_content").outerHeight() < ($("#mast_bd").height() - 346)) {
+        $("#main_content").height($("#mast_bd").height() - 346);
+      } 
     });
   }
 };
@@ -301,9 +301,9 @@ var App = {
 
 //**********Initialize Document**********//
 $(document).ready(function() {
-  Flash.injectFlashBox();
-  Flash.setFlash();
-  App.initDeleteLinks();
+  //Flash.injectFlashBox();
+  //Flash.setFlash();
+  //App.initDeleteLinks();
   Utility.resizeMainView();
-  //Utility.resizeContentContainer();
+  Utility.resizeContentContainer();
 });
