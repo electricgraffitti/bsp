@@ -140,8 +140,9 @@ footer{height:62px;width:100%;}
 #bd{margin:0px auto;text-align:left;overflow-y: scroll; overflow-x: hidden;}
 .content_segment{position:relative;float:left;width:100%;padding-bottom:20px;}
 .highlighted_text {font: 700 28px "Times New Roman", Times, serif;text-align: center;width: 600px;color: #7D2326;padding-top: 6px;}
-.highlighted_text a {color: #6A6450; text-decoration: none;}
+.highlighted_text a {color: #6A6450; text-decoration: none; font-size: 14px;}
 .highlighted_text a:hover {color:#0088cc; text-decoration: underline;}
+.highlighted_text.dark {color: #6A6450;}
 /*************************************************************************************************************************************/
 /*************************************************************************************************** NAVIGATION **********************/
 ul.nav,ul.nav li{position:relative;float:left;margin-top:1px;}
