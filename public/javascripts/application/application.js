@@ -34,7 +34,7 @@ var VidPlayer = {
         playerWindow = $("<div id='player_window'><div id='close_link'></div></div>"),
         videoPlayer = Video.setupModalVideoPanelHtml();
 
-    videoPlayer.find("source").attr("src", "https://s3.amazonaws.com/imagineassets/generalvideos/bsp_demo_reel_2.mp4");
+    videoPlayer.find("source").attr("src", "https://s3.amazonaws.com/imagineassets/generalvideos/bsp_demo_reel_2_july.mp4");
     playerWindow.append(videoPlayer);
     expose.append(playerWindow);
     VidPlayer.injectPlayer(playerWindow, expose);
