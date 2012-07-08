@@ -150,7 +150,6 @@ var Video = {
       player.width(580);
       player.height(326);
       if (htmlTag.hasClass("ie9")) {
-        console.log("ie9");
         _V_.options.techOrder = ["flash"];
       }
 
