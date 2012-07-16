@@ -143,7 +143,7 @@ var Video = {
 
   playModalVideo: function() {
     var htmlTag = $("html"),
-        player = _V_("modal_video");
+        player = _V_("modal_video", {"controls":false});
         playerHtml = $("#modal_video_player");
 
       playerHtml.removeClass("hidden");
