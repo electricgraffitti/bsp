@@ -116,7 +116,7 @@ var Video = {
   },
 
   setupModalVideoPanelHtml: function() {
-    var videoPanel = $('<div id="modal_video_player" class="hidden"><video id="modal_video" class="video-js vjs-default-skin" controls preload="auto" width="580" height="326" poster="" data-setup="{}"><source src="" type="video/mp4"></video></div>');
+    var videoPanel = $('<div id="modal_video_player" class="hidden"><video id="modal_video" class="video-js vjs-default-skin" preload="auto" width="580" height="326" poster="" data-setup="{}"><source src="" type="video/mp4"></video></div>');
     return videoPanel;
   },
 
@@ -139,6 +139,33 @@ var Video = {
       player.width(580);
       player.height(326);
       player.play();
+  },
+
+  playFlashVideo: function() {
+
+    flowplayer("player", "/flowplayer/flowplayer-3.2.7.swf", {
+      clip: {
+        url: "https://s3.amazonaws.com/imagineassets/generalvideos/bsp_demo_reel_2_july.mp4",
+        scaling: 'orig'
+      },
+      plugins: {
+        controls: {
+          url: '/flowplayer/flowplayer.controls-3.2.5.swf',
+          playlist: false,
+          backgroundColor: '#000', 
+          time: false,
+          fullscreen: true,
+          volume: false,
+          bufferColor: '#666666',
+          buttonColor: '#666666',
+          tooltips: {
+            buttons: true, 
+            fullscreen: 'Fullscreen' 
+          } 
+        }
+      }
+    });
+    VidPlayer.closeVideoModal();
   },
 
   playModalVideo: function() {

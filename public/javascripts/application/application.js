@@ -31,15 +31,14 @@ var VidPlayer = {
 
   launchModalPlayer: function() {
     var expose = $("<div id='expose'></div>"),
-        playerWindow = $("<div id='player_window'><div id='close_link'></div></div>"),
-        videoPlayer = Video.setupModalVideoPanelHtml();
+        playerWindow = $("<div id='player_window'><div id='close_link'></div><div id='player'></div></div>");
 
-    videoPlayer.find("source").attr("src", "https://s3.amazonaws.com/imagineassets/generalvideos/bsp_demo_reel_2_july.mp4");
-    playerWindow.append(videoPlayer);
+    // videoPlayer.find("source").attr("src", "");    
+    // videoPlayer.find("source").attr("src", "https://s3.amazonaws.com/imagineassets/generalvideos/bsp_demo_reel_2_july.mp4");
+    // playerWindow.append(videoPlayer);
     expose.append(playerWindow);
     VidPlayer.injectPlayer(playerWindow, expose);
-    Video.playModalVideo();
-    VidPlayer.closeVideoModal();
+    Video.playFlashVideo();
   },
 
   injectPlayer: function(playerWindow, expose) {
@@ -51,7 +50,7 @@ var VidPlayer = {
     }
   },
 
-  closeVideoModal: function(attribute){
+  closeVideoModal: function() {
      var closeVideoLink = $("#close_link");
 
      closeVideoLink.on("click", function() {
