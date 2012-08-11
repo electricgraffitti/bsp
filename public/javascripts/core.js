@@ -145,7 +145,8 @@ var Video = {
 
     flowplayer("player", "/flowplayer/flowplayer-3.2.7.swf", {
       clip: {
-        url: "https://s3.amazonaws.com/imagineassets/generalvideos/bsp_demo_reel_august.mp4",
+        // url: "https://s3.amazonaws.com/imagineassets/generalvideos/bsp_demo_reel_august.mp4",
+        url: "http://d3qf68u022mzwt.cloudfront.net/generalvideos/bsp_demo_reel_august.mp4",
         scaling: 'orig'
       },
       plugins: {
