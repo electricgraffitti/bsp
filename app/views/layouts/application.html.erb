@@ -25,10 +25,8 @@
     <div id="combined_segments">
 
       <%# Footer (on top to allow for layer stack. for effect %> 
-      <div id="mast_footer" class="content_wrapper">
-        <div id="ft" class="internal_content_wrapper">
-          <%= render :partial => "layouts/application/footer" %>
-        </div>
+      <div id="mast_footer" class="<%= @page_class ? @page_class : "" %> content_wrapper">
+          <%= yield :footer %>
       </div>
 
 
