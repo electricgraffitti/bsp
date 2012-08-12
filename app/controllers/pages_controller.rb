@@ -11,6 +11,6 @@ class PagesController < ApplicationController
 
   def new_contact
   	AppMailer.contact_email(params).deliver
-  	redirect_to home_path, :notice => "You submission has been sent."
+  	redirect_to home_path, :notice => "Your submission has been sent."
   end
 end

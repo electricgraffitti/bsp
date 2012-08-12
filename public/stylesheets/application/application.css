@@ -87,7 +87,7 @@ body {overflow: hidden;}
 	top: 346px;
 	left: 0px;
 	width: 600px;
-	background: transparent url(../../images/paper-bg.png) 0px 0px no-repeat;
+	background: transparent url(../../images/paper-bg.png) 0px 0px repeat-y;
 }
 #sidebar {position: relative; float:left; border-right: 1px solid #ac8a57; width: 195px; min-height: 400px;}
 #main_section {position: relative; float:left; width: 600px;padding-bottom: 56px;}
@@ -124,6 +124,20 @@ body {overflow: hidden;}
 }
 #demo_reel img {margin: 15px 11px;}
 
+#home_content {
+	position: relative;
+	float: left;
+	color: #6A6450;
+}
+#home_content header {font-size: 28px;text-align: center;width: 600px;padding: 10px 0px;}
+#home_content p {
+	position: relative;
+	width: 280px;
+	text-align: justify;
+	padding: 10px;
+	float: left;
+}
+.download_link {margin-bottom: 10px;}
 #expose {position: absolute; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); z-index: 1000; top: 0px; left: 0px;}
 .ie8 #expose {background-color: #000000;}
 #player_window {position: absolute; padding-top: 109px;top: 276px; left: 50%; width: 600px; height: 360px; margin-left: -300px; background: transparent url(../../images/video_modal_bg.png) 0px 0px no-repeat; z-index: 1001;}
@@ -186,7 +200,7 @@ body {overflow: hidden;}
 #contact .field textarea {height: 80px;}
 img#students, img#cover {margin-bottom: 10px;}
 img#cover {margin: 3px 0px 0px;}
-.content p.caption {color: #6A6450;font-weight: 700;font-size: 12px;font-style: italic;}
+.content p.caption {color: #6A6450;font-weight: 700;font-size: 12px;font-style: italic; text-indent: 0px;}
 .content div.pledge {font-size: 16px;}
 
 
