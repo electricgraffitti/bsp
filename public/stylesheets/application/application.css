@@ -143,6 +143,7 @@ body {overflow: hidden;}
 	float: left;
 }
 #movie_credits {background: url(../../images/movie_credits.png) 0px 45px no-repeat; width:700px;height: 300px;}
+.play_trailer {cursor: pointer;}
 .download_link {margin-bottom: 10px;}
 #expose {position: absolute; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); z-index: 1000; top: 0px; left: 0px;}
 .ie8 #expose {background-color: #000000;}
@@ -205,10 +206,10 @@ body {overflow: hidden;}
 #contact .field textarea {width: 210px;}
 #contact .field textarea {height: 80px;}
 img#students, img#cover {margin-bottom: 10px;}
-img#cover {margin: 3px 0px 0px;}
+img#cover {margin: -15px 0px 0px;}
 .content p.caption {color: #6A6450;font-weight: 700;font-size: 12px;font-style: italic; text-indent: 0px;}
 .content div.pledge {font-size: 16px;}
-
+.pledge span {display: block;margin-bottom: 10px;font-weight: 700;font-size: 15px;}
 
 .facebook_link, .facebook_link span, .fb-like {position: relative; float: left;}
 .facebook_link span {display: inline-block; margin-right: 5px;}
