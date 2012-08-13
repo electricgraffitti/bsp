@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 	
   def home
-    @page_class = "home_page play_trailer"
+    @page_class = "play_trailer"
   end
 
   def about
