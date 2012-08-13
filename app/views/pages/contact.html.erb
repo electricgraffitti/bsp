@@ -1,5 +1,10 @@
 <header id="content_header" class="highlighted_text dark">Contact Us</header>
 <section id="contact" class="content">
+	<div>
+		Contact us for a screening in your area<br/> 
+		phone: 575.224.1480<br/>
+		email: <%= link_to "jennifer@imagineeducation.org", "mailto:jennifer@imagineeducation.org" %>
+	</div>
 	<%= form_tag new_contact_path do %>
 		<%= hidden_field_tag :captcha %>
 		<div class="field">
