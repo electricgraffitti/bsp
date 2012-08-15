@@ -142,7 +142,7 @@ body {overflow: hidden;}
 	padding: 10px;
 	float: left;
 }
-#movie_credits {background: url(../../images/movie_credits2.png) 0px 5px no-repeat; width:600px;height: 300px;}
+#movie_credits {background: url(../../images/movie_credits2.png) 0px 5px no-repeat; width:600px;height: 145px;}
 .home_page #movie_credits {background: url(../../images/movie_credits.png) 0px 45px no-repeat; width:700px;height: 300px;}
 
 .play_trailer {cursor: pointer;}
