@@ -93,7 +93,7 @@ var Utility = {
 var Video = {
   
   initVideos: function() {
-    Video.injectPlayer();
+    //Video.injectPlayer();
   },
 
   injectPlayer: function() {
