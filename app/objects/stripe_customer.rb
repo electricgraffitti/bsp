@@ -5,9 +5,9 @@ class StripeCustomer
 	def self.create_customer(params)
 		Stripe.api_key = APP["stripe_key"] # Get Key from app_config.yml
     customer = Stripe::Customer.create(
-              :card => params[:purchase][:stripe_card_token],
-              :email => params[:teacher][:email],
-              :description => params[:teacher][:email]
+              :card => params[:pledge][:stripe_card_token],
+              :email => params[:email],
+              :description => params[:email]
     )
     return customer
 	end

@@ -5,7 +5,7 @@ class StripePurchase
 	def self.create_charge(params, customer_stripe_id, description)
 		Stripe.api_key = APP["stripe_key"]
 		Stripe::Charge.create(
-  		:amount => StripePurchase.calculate_purchase_price(params[:teacher_count], params[:student_count]),
+  		:amount => Currency.calculate_dollars_to_cents(params[:pledge][:amount]),
   		:customer => customer_stripe_id,
   		:currency => "usd",
   		:description => description
@@ -38,12 +38,6 @@ class StripePurchase
 	end
 
 	private
-
-	def self.calculate_purchase_price(teacher_count, student_count)
-		teacher_price = Currency.calculate_dollars_to_cents((teacher_count).to_i * 20)
-		student_price = Currency.calculate_dollars_to_cents((student_count).to_i * 12)
-		return (teacher_price + student_price)
-	end
 
 	def retrieve_stripe_key
     return Stripe.api_key = APP["stripe_key"]

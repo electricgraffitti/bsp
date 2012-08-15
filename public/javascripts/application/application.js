@@ -31,8 +31,9 @@ var VidPlayer = {
 
   launchModalPlayer: function() {
     var expose = $("<div id='expose'></div>"),
-        playerWindow = $("<div id='player_window'><div id='close_link'></div><div id='player'></div></div>");
+        playerWindow = $("<div id='player_window'><div id='close_link'></div><iframe src='http://player.vimeo.com/video/47545749' width='580' height='326' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>");
 
+    // playerWindow = $("<div id='player_window'><div id='close_link'></div><div id='player'></div></div>"); Old Player
     // videoPlayer.find("source").attr("src", "");    
     // videoPlayer.find("source").attr("src", "https://s3.amazonaws.com/imagineassets/generalvideos/bsp_demo_reel_2_july.mp4");
     // playerWindow.append(videoPlayer);

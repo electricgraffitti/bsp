@@ -1,5 +1,7 @@
 Bsp::Application.routes.draw do
 
+  resources :pledges
+
   match "welcome" => "pages#home", :as => :home
   match "about" => "pages#about", :as => :about
   match "sponsor-dvd" => "pages#sponsor", :as => :sponsor

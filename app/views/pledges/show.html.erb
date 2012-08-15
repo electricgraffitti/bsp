@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First name:</b>
+  <%= @pledge.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @pledge.last_name %>
+</p>
+
+<p>
+  <b>Stripe:</b>
+  <%= @pledge.stripe_id %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @pledge.amount %>
+</p>
+
+<p>
+  <b>School:</b>
+  <%= @pledge.school %>
+</p>
+
+<p>
+  <b>Instructions:</b>
+  <%= @pledge.instructions %>
+</p>
+
+<p>
+  <b>Billing address:</b>
+  <%= @pledge.billing_address %>
+</p>
+
+<p>
+  <b>Billing city:</b>
+  <%= @pledge.billing_city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @pledge.state_id %>
+</p>
+
+<p>
+  <b>Billing zip:</b>
+  <%= @pledge.billing_zip %>
+</p>
+
+
+<%= link_to 'Edit', edit_pledge_path(@pledge) %> |
+<%= link_to 'Back', pledges_path %>

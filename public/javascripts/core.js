@@ -143,29 +143,29 @@ var Video = {
 
   playFlashVideo: function() {
 
-    flowplayer("player", "/flowplayer/flowplayer-3.2.7.swf", {
-      clip: {
-        // url: "https://s3.amazonaws.com/imagineassets/generalvideos/bsp_demo_reel_august.mp4",
-        url: "http://d3qf68u022mzwt.cloudfront.net/generalvideos/bsp_demo_reel_august.mp4",
-        scaling: 'orig'
-      },
-      plugins: {
-        controls: {
-          url: '/flowplayer/flowplayer.controls-3.2.5.swf',
-          playlist: false,
-          backgroundColor: '#000', 
-          time: false,
-          fullscreen: true,
-          volume: false,
-          bufferColor: '#666666',
-          buttonColor: '#666666',
-          tooltips: {
-            buttons: true, 
-            fullscreen: 'Fullscreen' 
-          } 
-        }
-      }
-    });
+    // flowplayer("player", "/flowplayer/flowplayer-3.2.7.swf", {
+    //   clip: {
+    //     // url: "https://s3.amazonaws.com/imagineassets/generalvideos/bsp_demo_reel_august.mp4",
+    //     url: "http://d3qf68u022mzwt.cloudfront.net/generalvideos/bsp_demo_reel_august.mp4",
+    //     scaling: 'orig'
+    //   },
+    //   plugins: {
+    //     controls: {
+    //       url: '/flowplayer/flowplayer.controls-3.2.5.swf',
+    //       playlist: false,
+    //       backgroundColor: '#000', 
+    //       time: false,
+    //       fullscreen: true,
+    //       volume: false,
+    //       bufferColor: '#666666',
+    //       buttonColor: '#666666',
+    //       tooltips: {
+    //         buttons: true, 
+    //         fullscreen: 'Fullscreen' 
+    //       } 
+    //     }
+    //   }
+    // });
     VidPlayer.closeVideoModal();
   },
 
