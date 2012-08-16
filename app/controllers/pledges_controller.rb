@@ -47,7 +47,7 @@ class PledgesController < ApplicationController
 
     respond_to do |format|
       if @pledge
-        format.html { redirect_to home_path, notice: 'Thank you for your support. We will be in contact with you shortly.' }
+        format.html { redirect_to home_path, notice: 'Thank you for your support!' }
         format.json { render json: @pledge, status: :created, location: @pledge }
       else
         format.html { render action: "new" }
