@@ -1,13 +1,14 @@
 class Pledge < ActiveRecord::Base
 
 	# Associations
+	belongs_to :state
 
 	# Attrs
   attr_accessor :stripe_card_token
 
   # Methods
 
-  def setup_pledge_for_stripe(params)
+  def self.setup_pledge_for_stripe(params)
 		charge = nil
 		customer = nil
 		# Wrap in transaction to protect DB on failure of any creations
@@ -22,11 +23,12 @@ class Pledge < ActiveRecord::Base
 
 				# Create new Pledge record in the Database
 				@pledge = Pledge.new(params[:pledge])
+				@pledge.stripe_id = customer.id
 				@pledge.save!
 
 				# Send Notifications
-				# AppMailer.thank_you_email(@pledge, charge).deliver
-				# AppMailer.imagine_new_pledge_notification(@pledge, customer, charge).deliver
+				AppMailer.thank_you_email(@pledge, charge).deliver
+				AppMailer.imagine_new_pledge_notification(@pledge, customer, charge).deliver
 			end
 			return true
 		rescue ActiveRecord::RecordInvalid => invalid

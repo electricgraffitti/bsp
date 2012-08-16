@@ -48,13 +48,19 @@
                               A new pledge for The Biggest Story Problem has been posted.
                             </p>
                             <ul style="font-family: helvetica,arial,sans-serif; font-size: 12px; margin-top: 25px; margin-right: 50px; margin-left: 40px; color: #5f6062">
+                              <li>Name: <%= @pledge.first_name %> <%= @pledge.last_name %> </li>
                               <li>Email: <%= @pledge.email %></li>
-
+                              <li>Phone: <%= @pledge.phone %></li>
                               <li>Stripe ID: <%= @customer[:id] %></li>
-                              <li>Charge Amount: <%= number_to_currency(Currency.calculate_cents_to_dollars(@charge)) %></li>
+                              <li>Address: <%= @pledge.billing_address %> <%= @pledge.billing_city %> <%= @pledge.state.full_name %>, <%= @pledge.billing_zip %> </li>
+                              <br/>
+                              <br/>
+                              <li>Pledge Amount: <%= number_to_currency(Currency.calculate_cents_to_dollars(@charge)) %></li>
+                              <li>School: <%= @pledge.school %></li>
+                              <li>Additional Info: <%= @pledge.instructions %> </li>
                             </ul>
                             <p style="font-family: helvetica,arial,sans-serif; font-size: 12px; margin-top: 25px; margin-right: 50px; margin-left: 40px; color: #5f6062">
-                              Today is Love Your Developer Day! Love your developers!.
+                              Today is Love Your Developer Day! Love your developers! Last minute = potential bugs :) Dont be a hater.
                             </p>
                           </td>
                         </tr>

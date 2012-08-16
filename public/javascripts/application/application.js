@@ -18,6 +18,88 @@ var Navigation = {
   }
 };
 
+var Gateway = {
+  
+  formSubmit: function(form) {
+    $("#new_pledge").submit(function(event) {
+      var submitButton = $(this).find(".submit-button"),
+          actionsDiv = $(this).find(".actions");
+
+          $("#submit_error_message").remove();
+          $(".actions p").remove();
+          event.preventDefault();
+          Gateway.stripeVerify($(this));
+          FormFuncs.disableSubmitButton(submitButton);
+    });
+  },
+
+  stripeVerify: function(stripeForm) {
+    var self = stripeForm,
+        cardNumber = self.find("#credit_card_card_number").val(),
+        cardCvc = self.find("#credit_card_verification_value").val(),
+        cardMonth = self.find("#credit_card_month").val(),
+        cardYear = self.find("#credit_card_year").val(),
+        amount = ($("#pledge_amount").val() * 100); // Stripe expects amount to be in cents
+
+      if (cardNumber.length) {
+          // Submit Values to Stripe for auth
+          Stripe.createToken({
+            number: cardNumber,
+            cvc: cardCvc,
+            exp_month: cardMonth,
+            exp_year: parseInt(cardYear)
+          }, Gateway.stripeResponseHandler);
+      } else {
+        return false;
+      }
+  },
+
+  stripeResponseHandler: function(status, response) {
+    if (status == 200) {
+      $('#pledge_stripe_card_token').val(response.id)
+      $('#new_pledge')[0].submit();
+    } else {
+      //$('#error_message').text(response.error.message);
+      $('.submit-button').attr('disabled', false);
+      $('.submit-button').removeClass('disabled');
+      $(".actions p").remove();
+      $(".actions").append("<div id='submit_error_message' class='red'>" + response.error.message + "</div>");
+    }
+  }
+
+};
+
+var FormFuncs = {
+
+  validatePledgeForm: function(attribute) {
+    $("#new_pledge").bind('fieldIsInvalid', function(event, form, el) {
+      el.focus();
+    }).ketchup();
+    $("input[type='submit']", "#new_pledge").on("click", function(e) {
+      if (FormFuncs.validateCartFields() == true) {
+        if( $('#new_pledge').ketchup("isValid") ) {
+          Gateway.formSubmit();
+        }
+      } else {
+        e.preventDefault();
+        alert("Your pledge value must be numeric.");
+      }
+    });    
+  },
+
+  disableSubmitButton: function(submitButton) {
+    $(".actions").append(Ajax.ajaxIcon);
+    submitButton.attr("disabled", "disabled");
+    submitButton.addClass("disabled");
+  },
+
+  validateCartFields: function() {
+    var isValid = Utility.isNumeric($("#pledge_amount").val());
+    return isValid;
+  }
+
+};
+
 var VidPlayer = {
 
   initTrailerLink: function() {

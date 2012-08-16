@@ -7,23 +7,23 @@
 	</div>
 	<%= form_tag new_contact_path do %>
 		<%= hidden_field_tag :captcha %>
-		<div class="field">
+		<div class="field half_field">
 			<label>First Name</label><br/>
 			<%= text_field_tag :first_name %>
 		</div>
-		<div class="field">
+		<div class="field half_field">
 			<label>Last Name</label><br/>
 			<%= text_field_tag :last_name %>
 		</div>
-		<div class="field">
+		<div class="field half_field">
 			<%= label_tag "Email" %><br/>
 			<%= text_field_tag :email %>
 		</div>
-		<div class="field">
+		<div class="field half_field">
 			<%= label_tag "Comments" %><br/>
 			<%= text_area_tag :comments %>
 		</div>
-		<div class="field form_links">
+		<div class="field half_field form_links">
 			<div>For more information: <a href="/downloads/Press Kit - The Biggest Story Problem.pdf", title="The Biggest Story Problem - Press Kit" target="_blank">Press Materials</a></div>
 			<div class="facebook_link">
 				<span>We're on Facebook:</span> 
@@ -35,7 +35,7 @@
 				<%= link_to "Write a Review", "http://www.imdb.com/title/tt2255402/" %>
 			</div>
 		</div>
-		<div class="field action">
+		<div class="field half_field action">
 			<%= submit_tag "Contact Us", :class => "button blue_button" %>
 		</div>
 	<% end %>

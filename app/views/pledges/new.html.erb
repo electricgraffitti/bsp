@@ -1,5 +1,16 @@
-<h1>New pledge</h1>
+<section id="pledge">
+	<%= render partial: 'pledges/form' %>
+</section>
+<%= clear %> 
 
-<%= render 'form' %>
+<% content_for :javascripts do %> 
+  <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
+  <script type="text/javascript">
+    Stripe.setPublishableKey("<%= APP['stripe_publish_key'] %>");
 
-<%= link_to 'Back', pledges_path %>
+    $(document).ready(function() {
+    	FormFuncs.validatePledgeForm();
+    });
+
+  </script>
+<% end %>

@@ -163,14 +163,13 @@ body {overflow: hidden;}
 
 .sponsor_header {font-size: 25px;}
 .sponsor_header span {color:#524D3D;}
-#counter {text-align: center;font-size: 16px;font-weight: 700;}
 
 .content {
 	position: relative;
 	float: left;
 	margin-top: 20px;
 	padding: 0px 50px;
-	width: 485px;
+	width: 495px;
 }
 .content header {width: 485px;font-size: 24px; font-weight: 700; margin-bottom: 20px;}
 .content .column {
@@ -194,23 +193,41 @@ body {overflow: hidden;}
 	/*color: #0088cc;*/
 }
 
-#contact .field {
+#counter {position: relative;text-align: center;font-size: 16px;font-weight: 700;}
+#counter p {font-size: 19px;text-indent: 0px;text-align: left;line-height: 26px;margin-bottom: 26px;}
+#counter p span {font-size: 32px;display: block; width: 100%;}
+#pledge_boxes {position: relative; float: left; padding: 20px 0; border: 1px solid #524D3D; border-left: 0; border-right: 0;margin-bottom: 20px;}
+#pledge_boxes ul li {font-size: 16px; font-weight: 700; text-align: center; width: 33%; float: left; list-style-type: none;}
+#pledge_boxes ul li span {font-size: 32px;display: block; width: 100%;}
+#pledge_boxes ul li.full_width { width: 100%;}
+
+form .field {
 	position: relative;
 	float: left;
-	width: 225px;
 }
-#contact .field.form_links {
+form .field.half_field {width: 225px;}
+form .field.full_width {width: 600px;}
+form .field.form_links {
 	margin-top: -50px;
 }
-#contact .field.form_links div {padding-bottom: 10px;	height: 26px;}
-#contact .field.action {
+form .field.action {
 	margin-top: 20px;
 	float:right;
 }
-#contact .field input,
-#contact .field select,
-#contact .field textarea {width: 210px;}
-#contact .field textarea {height: 80px;}
+.card_info {float: left;margin-top: 15px;position: relative;}
+#contact form .field input, form .field.half_field input,
+#contact form .field select, form .field.half_field select,
+#contact form .field textarea {width: 210px;}
+#contact form .form_links div {padding-bottom: 10px;	height: 26px;}
+form .field textarea {height: 80px;}
+form .form_section .field textarea {width: 450px;}
+.inline_field img {
+	margin-left: 3px;
+	margin-top: -2px;
+}
+.no_label {
+	padding-top: 23px;
+}
 img#students, img#cover {margin-bottom: 10px;}
 img#cover {margin: -15px 0px 0px;}
 .content p.caption {color: #6A6450;font-weight: 700;font-size: 12px;font-style: italic; text-indent: 0px;}

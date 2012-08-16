@@ -17,7 +17,7 @@ class AppMailer < ActionMailer::Base
     else
       @charge = charge_obj.amount
     end
-    @pledge = teacher
+    @pledge = pledge
     @customer = customer_obj
     mail(:to => "Scott Laidlaw <scott@imagineeducation.org>, Jennifer Harris <jennifer@imagineeducation.org>", :subject => "New BSP Pledge!")
   end  

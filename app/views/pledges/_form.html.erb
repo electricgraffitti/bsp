@@ -1,57 +1,94 @@
 <%= form_for(@pledge) do |f| %>
-  <% if @pledge.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@pledge.errors.count, "error") %> prohibited this pledge from being saved:</h2>
-
-      <ul>
-      <% @pledge.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+  <%= render partial: 'layouts/error_block', locals: {obj: @pledge} %>
+  <section class="content form_section">
+  <header>Pledge Information</header>
+    <div class="field half_field">
+      <%= f.label :amount, raw("Pledge Amount <span class='red'>*</span>") %>
+      <%= f.text_field :amount, "data-validate" => "validate(required)" %>
+    </div>  
+    <div class="field half_field">
+      <%= f.label :school %>
+      <%= f.text_field :school, value: "", placeholder: "Leave blank for next school on list" %>
+    </div>
+    <div class="field full_width">
+      <%= f.label :instructions, raw("Additional Shipping or School Information") %>
+      <%= f.text_area :instructions %>
+    </div> 
+  </section>
+<section class="content form_section">
+  <header>Your Billing Information</header>
+  <% if @pledge.stripe_card_token %>
+    <div class="green">
+      Credit Card has been verified.
+    </div>
+  <% else %>
+    <div id="credit_card_fields">
+      <div class="field half_field">
+        <%= f.label :first_name, raw("First Name <span class='red'>*</span>") %>
+        <%= f.text_field :first_name, "data-validate" => "validate(required)" %>
+      </div>
+      <div class="field half_field">
+        <%= f.label :last_name, raw("Last Name <span class='red'>*</span>") %>
+        <%= f.text_field :last_name, "data-validate" => "validate(required)" %>
+      </div>
+      <div class="field half_field ">
+        <%= f.label :email, raw("Email Address <span class='red'>*</span>") %>
+        <%= f.text_field :email, "data-validate" => "validate(required, email)" %>
+      </div>
+      <div class="field half_field ">
+        <%= f.label :phone, raw("Phone Number <span class='red'>*</span>") %>
+        <%= f.text_field :phone, "data-validate" => "validate(required)" %>
+      </div>
+      <%= clear %>
+    <%= f.hidden_field :stripe_card_token %>  
+    <%= fields_for :credit_card do |cc| %>
+      <div class="field half_field inline_field">
+        <%= cc.label :card_number, raw("Card Number #{"4242424242424242" if Rails.env == "development"} <span class='red'>*</span>") %>
+        <%= cc.text_field :card_number, :class => "card-number", "data-validate" => "validate(required, number, rangelength(13, 16))" %>
+      </div>
+      <div class="field half_field inline_field no_label">
+        <%= image_tag('credit_card_logos.png') %>
+      </div>
+      <div class="card_info">
+        <div class="field inline_field">
+          <%= label_tag "Card Type" %>
+          <%= cc.select :type, [['Visa', 'visa'], ['MasterCard', 'master'], ['American Express', 'american_express'], ['Discover']], :prompt => 'Select Card Type'%>
+        </div>
+        <div class="field inline_field">
+          <%= label_tag "Expiration Date" %>
+          <%= cc.select :month, (1 .. 12).collect { |m| [m.to_s.rjust(2,"0"),m] }, :prompt => "Mo.", :class => "card-expiry-month" %>
+          <%= cc.select :year, (Time.now.year .. 10.years.from_now.year), :prompt => "Yr.", :class => "card-expiry-year" %>
+        </div>
+        <div class="field inline_field">
+          <%= cc.label :verification_value, raw("CVV <span class='red'>*</span>") %>
+          <%= cc.text_field :verification_value, :size => 4, :class => "card-cvc", "data-validate" => "validate(required, number, rangelength(3, 4)" %>
+          <%= image_tag('cvv.png') %>
+        </div>
+      </div>
+    <% end %>
+      <div class="field half_field">
+        <%= f.label :billing_address, raw("Billing Address <span class='red'>*</span>") %>
+        <%= f.text_field :billing_address, "data-validate" => "validate(required)" %>
+      </div>
+      <%= clear %>
+      <div class="field inline_field">
+        <%= f.label :billing_city, raw("Billing City <span class='red'>*</span>") %>
+        <%= f.text_field :billing_city, size: 20, "data-validate" => "validate(required)" %>
+      </div>
+      <div class="field inline_field">
+        <%= f.label :state_id, raw("State <span class='red'>*</span>") %>
+        <%= f.collection_select :state_id, State.all, :id, :full_name, :prompt => 'Select State' %>
+      </div>
+      <div class="field inline_field">
+        <%= f.label :billing_zip, raw("Billing Zip <span class='red'>*</span>") %>
+        <%= f.text_field :billing_zip, size: 10, "data-validate" => "validate(required)" %>
+      </div>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name %>
-  </div>
-  <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name %>
-  </div>
-  <div class="field">
-    <%= f.label :stripe_id %><br />
-    <%= f.text_field :stripe_id %>
-  </div>
-  <div class="field">
-    <%= f.label :amount %><br />
-    <%= f.text_field :amount %>
-  </div>
-  <div class="field">
-    <%= f.label :school %><br />
-    <%= f.text_field :school %>
-  </div>
-  <div class="field">
-    <%= f.label :instructions %><br />
-    <%= f.text_area :instructions %>
-  </div>
-  <div class="field">
-    <%= f.label :billing_address %><br />
-    <%= f.text_field :billing_address %>
-  </div>
-  <div class="field">
-    <%= f.label :billing_city %><br />
-    <%= f.text_field :billing_city %>
-  </div>
-  <div class="field">
-    <%= f.label :state_id %><br />
-    <%= f.number_field :state_id %>
-  </div>
-  <div class="field">
-    <%= f.label :billing_zip %><br />
-    <%= f.text_field :billing_zip %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  </section>
+  <section class="content form_section">
+    <div class="field actions">
+      <%= f.submit "Pledge", :class => "button blue_button submit-button"%>
+    </div>
+  </section>
 <% end %>

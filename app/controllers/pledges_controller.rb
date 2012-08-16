@@ -1,4 +1,7 @@
 class PledgesController < ApplicationController
+
+  before_filter :super_admin, except: [:new, :create]
+
   # GET /pledges
   # GET /pledges.json
   def index
@@ -40,11 +43,11 @@ class PledgesController < ApplicationController
   # POST /pledges
   # POST /pledges.json
   def create
-    @pledge = Pledge.new(params[:pledge])
+    @pledge = Pledge.setup_pledge_for_stripe(params)
 
     respond_to do |format|
-      if @pledge.save
-        format.html { redirect_to @pledge, notice: 'Pledge was successfully created.' }
+      if @pledge
+        format.html { redirect_to home_path, notice: 'Thank you for your support. We will be in contact with you shortly.' }
         format.json { render json: @pledge, status: :created, location: @pledge }
       else
         format.html { render action: "new" }

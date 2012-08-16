@@ -35,7 +35,7 @@ var Flash = {
 
 var Ajax = {
   
-  ajaxIcon: "<p>Processing... <img src='images/ajax-loader.gif'/></p>",
+  ajaxIcon: "<p>Processing... <img src='/images/ajax-loader.gif'/></p>",
 
   ajaxFlash: function() {
     
@@ -62,6 +62,25 @@ var Ajax = {
 
 var Utility = {
 
+  isNumeric: function(strString) {
+   var validChars = "0123456789",
+       strChar,
+       checkResult = true;
+
+   if (strString.length == 0) return false;
+
+   //  test strString consists of valid characters listed above
+   for (i = 0; i < strString.length && checkResult == true; i++)
+      {
+      strChar = strString.charAt(i);
+      if (validChars.indexOf(strChar) == -1)
+         {
+         checkResult = false;
+         }
+      }
+   return checkResult;
+  },
+  
   resizeMainView: function() {
     var header = $("#hd"),
         mainContent = $("#bd"),
@@ -334,8 +353,8 @@ var App = {
 
 //**********Initialize Document**********//
 $(document).ready(function() {
-  //Flash.injectFlashBox();
-  //Flash.setFlash();
+  Flash.injectFlashBox();
+  Flash.setFlash();
   //App.initDeleteLinks();
   Utility.resizeMainView();
   Utility.resizeContentContainer();
