@@ -3,21 +3,21 @@
 	<div class="column first">
 		<div id="counter">
 			<p class="counter_section">
-				<span>450</span>
+				<span><%= pledge_count %></span>
 				schools sponsored				
 			</p>
 			<p class="counter_section">
-				<span>$1240</span>
-				of $25,000 pledged goal.
+				<span>$<%= pledge_amount %></span>
+				of $50,000 pledged goal
 			</p>
 			<p class="counter_section">
-				<span>45</span>
-				days to goal.
+				<span><%= countdown %></span>
+				days to goal
 			</p>
 		</div>
 	</div>
 	<div class="column">
-		<%= link_to(image_tag("dvd.png", :id => "cover"), "http://www.kickstarter.com/projects/1923314699/1146234773?token=87f13f95") %>
+		<%= link_to(image_tag("dvd.png", :id => "cover"), new_pledge_path) %>
 		<div class="pledge">
 			<%= link_to "Sponsor A School", new_pledge_path, class: "button blue_button", title: "Biggest Story Problem - Kickstarter Project" %>
 		</div>
@@ -28,7 +28,7 @@
 		<ul>
 			<li>
 				<span class="pledge_amount">$25</span>
-				1 DVD to a school.
+				1 DVD to a school
 			</li>
 			<li>
 				<span class="pledge_amount">$40</span>
@@ -44,13 +44,18 @@
 			</li>			
 		</ul>
 	</section>
-	<p>As a widespread effort to change math education, we have set a goal to send a DVD to every public middle school in the United States!  All proceeds from your donation will be dedicated to achieving this goal.
-	</p>
-	<p>
-			Pledge $25 or more and you’ll also receive a copy of the film for yourself (free shipping in the US; additional shipping charges will apply for international addresses). Please remember to provide the name and address of the middle school(s) you’d like to receive the DVD(s) in the comments section of your pledge.  If you don't have a middle school to suggest, we will send to the next one(s) on the list!
-	</p>
-	<p>
-			You can make a donation directly through our Kickstarter Campaign.
-	</p>
+	<div class="column first">
+		<p>
+			As a widespread effort to change math education, we have set a goal to send a DVD to every public middle school in the United States! All proceeds from your donation will be dedicated to achieving this goal.
+		</p>
+		<p>
+			Pledge $25 or more and you’ll also receive a copy of the film for yourself. Please remember to provide the name and address of the middle school(s) you’d like to receive the DVD(s) in the school information section of your pledge. If you do not have a middle school to suggest, we will send to the next one on our list!
+		</p>
+	</div>
+	<div class="column">
+		<p>
+		DVDs will be released to schools throughout the 2012-13 school year. Your DVD copies will be mailed (free shipping within the US) as soon as we release to the public (2012). <span class="bold">To schedule a screening immediately in your area, please <%= link_to "contact us", contact_path %>.</span>
+		</p>
+	</div>
 </section>
 <%= clear %> 

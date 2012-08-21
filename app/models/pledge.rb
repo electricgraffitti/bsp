@@ -40,5 +40,7 @@ class Pledge < ActiveRecord::Base
 			end
 			return false
 		end
+		
 	end
+
 end

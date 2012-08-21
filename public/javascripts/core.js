@@ -63,7 +63,7 @@ var Ajax = {
 var Utility = {
 
   isNumeric: function(strString) {
-   var validChars = "0123456789",
+   var validChars = "0123456789.,",
        strChar,
        checkResult = true;
 

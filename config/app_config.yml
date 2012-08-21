@@ -34,12 +34,12 @@ staging:
 
 production:
  # Stripe API Key LIVE Keys
- # stripe_key: Tj0QFidoIGEVQMsZ5Tjoz4bJRMiZ2hBw
- # stripe_publish_key: pk_7tp6YKvD1fjOp684SPnlBcQVE5PGH
+ stripe_key: Tj0QFidoIGEVQMsZ5Tjoz4bJRMiZ2hBw
+ stripe_publish_key: pk_7tp6YKvD1fjOp684SPnlBcQVE5PGH
 
  # Stripe API Key TEST Keys
- stripe_key: NVLzMHliSHztG50SWkIXpAj0e1WiUPd2
- stripe_publish_key: pk_F5Gt8UwgvjDRv5hhbPbxeWdk3OKQE
+ # stripe_key: NVLzMHliSHztG50SWkIXpAj0e1WiUPd2
+ # stripe_publish_key: pk_F5Gt8UwgvjDRv5hhbPbxeWdk3OKQE
 
  app_name: The Biggest Story Problem | Why America's Students are Failing at Math
  from_email: support@kosjourney.com
