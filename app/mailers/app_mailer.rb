@@ -1,5 +1,5 @@
 class AppMailer < ActionMailer::Base
-  default from: "support@kosjourney.com"
+  default from: "support@imagineeducation.org"
 
   def thank_you_email(pledge, charge_obj)
     if charge_obj == 0
@@ -19,7 +19,7 @@ class AppMailer < ActionMailer::Base
     end
     @pledge = pledge
     @customer = customer_obj
-    mail(:to => "Scott Laidlaw <scott@imagineeducation.org>, Jennifer Harris <jennifer@imagineeducation.org>", :subject => "New BSP Pledge!")
+    mail(:to => "Scott Laidlaw <scott@imagineeducation.org>, Jennifer Harris <jennifer@imagineeducation.org>, Martha Riecks <martha@imagineeducation.org>", :subject => "New BSP Pledge!")
   end  
 
   def contact_email(params)
@@ -27,7 +27,7 @@ class AppMailer < ActionMailer::Base
     @last_name = params[:last_name]
     @email = params[:email]
     @comments = params[:comments]
-    mail(:to => "Jennifer Lightwood Harris Laidlaw Ortega Hanson Finn the Third <jennifer@imagineeducation.org>, Kate Martin <kate@imagineeducation.org>,  Scott Laidlaw <scott@imagineeducation.org>", :subject => "Biggest Story Problem Submission")
+    mail(:to => "Jennifer Lightwood <jennifer@imagineeducation.org>, Martha Riecks <martha@imagineeducation.org>, Kate Martin <kate@imagineeducation.org>, Scott Laidlaw <scott@imagineeducation.org>", :subject => "Biggest Story Problem Submission")
   end
 
 end
