@@ -206,9 +206,10 @@ form .field {
 	float: left;
 }
 form .field.half_field {width: 225px;}
+form .field.full_field {width: 460px;}
 form .field.full_width {width: 600px;}
 form .field.form_links {
-	margin-top: -50px;
+	/*margin-top: -50px;*/
 }
 form .field.action {
 	margin-top: 20px;
@@ -218,6 +219,7 @@ form .field.action {
 #contact form .field input, form .field.half_field input,
 #contact form .field select, form .field.half_field select,
 #contact form .field textarea {width: 210px;}
+#contact form .field.full_field textarea {width: 450px; height: 60px;}
 #contact form .form_links div {padding-bottom: 10px;	height: 26px;}
 form .field textarea {height: 80px;}
 form .form_section .field textarea {width: 450px;}

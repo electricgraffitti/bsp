@@ -8,11 +8,11 @@
     </div>  
     <div class="field half_field">
       <%= f.label :school %>
-      <%= f.text_field :school, value: "", placeholder: "Leave blank for next school on list" %>
+      <%= f.text_field :school, value: "", placeholder: "Leave blank and we'll choose" %>
     </div>
     <div class="field full_width">
       <%= f.label :instructions, raw("Additional Shipping or School Information") %>
-      <%= f.text_area :instructions %>
+      <%= f.text_area :instructions, placeholder: "Please include all shipping information for all sponsored schools" %>
     </div> 
   </section>
 <section class="content form_section">

@@ -26,8 +26,9 @@ class AppMailer < ActionMailer::Base
     @first_name = params[:first_name]
     @last_name = params[:last_name]
     @email = params[:email]
+    @hear_about = params[:hear_about]
     @comments = params[:comments]
-    mail(:to => "Jennifer Lightwood Harris Laidlaw Ortega Hanson Finn the Third <jennifer@imagineeducation.org>, Kate Martin <kate@imagineeducation.org>,  Scott Laidlaw <scott@imagineeducation.org>", :subject => "Biggest Story Problem Submission")
+    mail(:to => "Jennifer Lightwood <jennifer@imagineeducation.org>, Kate Martin <kate@imagineeducation.org>,  Scott Laidlaw <scott@imagineeducation.org>", :subject => "Biggest Story Problem Submission")
   end
 
 end

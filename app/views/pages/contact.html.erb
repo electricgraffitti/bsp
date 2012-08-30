@@ -20,9 +20,14 @@
 			<%= text_field_tag :email %>
 		</div>
 		<div class="field half_field">
+			<%= label_tag "How did you hear about us?" %><br/>
+			<%= text_field_tag :hear_about %>
+		</div>
+		<div class="field full_field">
 			<%= label_tag "Comments" %><br/>
 			<%= text_area_tag :comments %>
 		</div>
+		<%= clear %>
 		<div class="field half_field form_links">
 			<div>For more information: <a href="/downloads/Press Kit - The Biggest Story Problem.pdf", title="The Biggest Story Problem - Press Kit" target="_blank">Press Materials</a></div>
 			<div class="facebook_link">
