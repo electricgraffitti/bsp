@@ -113,7 +113,7 @@ var VidPlayer = {
 
   launchModalPlayer: function() {
     var expose = $("<div id='expose'></div>"),
-        playerWindow = $("<div id='player_window'><div id='close_link'></div><iframe src='http://player.vimeo.com/video/47545749' width='580' height='326' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>");
+        playerWindow = $("<div id='player_window'><div id='close_link'></div><iframe src='http://player.vimeo.com/video/47545749' width='640' height='360' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>");
 
     // playerWindow = $("<div id='player_window'><div id='close_link'></div><div id='player'></div></div>"); Old Player
     // videoPlayer.find("source").attr("src", "");    
