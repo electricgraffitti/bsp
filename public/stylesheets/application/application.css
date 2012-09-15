@@ -27,7 +27,7 @@
 body {overflow: hidden;}
 #cloud1 {position: absolute; top: 580px; width: 400px; height: 90px; background: transparent url(../../images/clouds/cloud-1.png) 0px 0px no-repeat;}
 #cloud2 {position: absolute; top: 200px; width: 500px; height: 192px; background: transparent url(../../images/clouds/cloud-2.png) 0px 0px no-repeat;}
-#cloud3 {position: absolute; top: 25px; width: 800px; height: 455px; background: transparent url(../../images/clouds/cloud-3.png) 0px 0px no-repeat;}
+#cloud3 {position: absolute; top: 54px; width: 800px; height: 455px; background: transparent url(../../images/clouds/cloud-3.png) 0px 0px no-repeat;}
 #combined_segments {
 	overflow: hidden;
 	background: #8fafe3 url(../../images/cloud-bg2.png) -400px -813px repeat-x;
