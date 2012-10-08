@@ -9,11 +9,11 @@ module ApplicationHelper
 	end
 
 	def pledge_amount
-		number_with_precision(Pledge.sum(:amount) + APP['additional_pledge'], :precision => 0)
+		number_with_precision(Pledge.sum(:amount) + APP['additional_pledge'], :precision => 0, :delimiter => ',')
 	end
 
 	def countdown
-		(Date.new(2012,11,06) - Date.today).to_i 
+		(Date.new(2012,11,07) - Date.today).to_i 
 	end
 
 end
