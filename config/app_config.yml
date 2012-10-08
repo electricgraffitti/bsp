@@ -15,6 +15,9 @@ development:
  # Zencoder API Key
  zencoder_key: 5419d90a185e5a73f823e4409f2465bb
 
+ # additional pledge amount
+ additional_pledge: 1500
+
 staging:
  # Stripe API Key TEST Keys
  stripe_key: NVLzMHliSHztG50SWkIXpAj0e1WiUPd2
@@ -31,6 +34,9 @@ staging:
 
  # Zencoder API Key
  zencoder_key: 5419d90a185e5a73f823e4409f2465bb
+
+ # additional pledge amount
+ additional_pledge: 1500
 
 production:
  # Stripe API Key LIVE Keys
@@ -52,3 +58,6 @@ production:
 
  # Zencoder API Key
  zencoder_key: 5419d90a185e5a73f823e4409f2465b
+
+ # additional pledge amount
+ additional_pledge: 1500
