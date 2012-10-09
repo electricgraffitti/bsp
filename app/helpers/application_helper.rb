@@ -5,7 +5,7 @@ module ApplicationHelper
 	end
 
 	def pledge_count
-		Pledge.sum(:amount) ? (Pledge.sum(:amount)/20).to_i : 0
+		Pledge.sum(:amount) ? ((Pledge.sum(:amount) + APP['additional_pledge'])/20).to_i : 0
 	end
 
 	def pledge_amount
