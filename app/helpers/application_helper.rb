@@ -13,7 +13,7 @@ module ApplicationHelper
 	end
 
 	def countdown
-		(Date.new(2012,12,07) - Date.today).to_i 
+		(Date.new(2013,04,07) - Date.today).to_i 
 	end
 
 end
