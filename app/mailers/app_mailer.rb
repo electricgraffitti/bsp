@@ -19,7 +19,7 @@ class AppMailer < ActionMailer::Base
     end
     @pledge = pledge
     @customer = customer_obj
-    mail(:to => "Scott Laidlaw <scott@imagineeducation.org>, Jennifer Harris <jennifer@imagineeducation.org>, Martha Riecks <martha@imagineeducation.org>", :subject => "New BSP Pledge!")
+    mail(:to => "Scott Laidlaw <scott@imagineeducation.org>, Jennifer Harris <jennifer@imagineeducation.org>", :subject => "New BSP Pledge!")
   end  
 
   def contact_email(params)
@@ -28,7 +28,7 @@ class AppMailer < ActionMailer::Base
     @email = params[:email]
     @hear_about = params[:hear_about]
     @comments = params[:comments]
-    mail(:to => "Jennifer Lightwood <jennifer@imagineeducation.org>, Martha Riecks <martha@imagineeducation.org>, Kate Martin <kate@imagineeducation.org>, Scott Laidlaw <scott@imagineeducation.org>", :subject => "Biggest Story Problem Submission")
+    mail(:to => "Jennifer Lightwood <jennifer@imagineeducation.org>, Scott Laidlaw <scott@imagineeducation.org>", :subject => "Biggest Story Problem Submission")
   end
 
 end
