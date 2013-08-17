@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(:version => 20120816013931) do
     t.string   "stripe_id"
     t.string   "email"
     t.string   "phone"
-    t.decimal  "amount",          :precision => 4, :scale => 2
+    t.decimal  "amount",          :precision => 8, :scale => 2
     t.string   "school",                                        :default => "General Pledge"
     t.text     "instructions"
     t.string   "billing_address"

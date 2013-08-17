@@ -2,21 +2,21 @@
 <section id="sponsor" class="content">
 	<div class="column first">
 		<div id="counter">
-			<p class="counter_section">
-				<span><%= pledge_count %></span>
-				schools sponsored				
-			</p>
-			<p class="counter_section">
-				<span>$<%= pledge_amount %></span>
-				of $25,000 pledged goal
-			</p>
-			<p class="counter_section">
-				<span><%= countdown %></span>
-				days to goal
-			</p>
+			<!-- <p class="counter_section">
+			       <span><%= pledge_count %></span>
+			       schools sponsored       
+			     </p> -->
+			<!-- <p class="counter_section">
+			       <span>$<%= pledge_amount %></span>
+			       of $25,000 pledged goal
+			     </p> -->
+			<!-- <p class="counter_section">
+			       <span><%= countdown %></span>
+			       days to goal
+			     </p> -->
 		</div>
 	</div>
-	<div class="column">
+	<div id="disc" class="column">
 		<%= link_to(image_tag("dvd.png", :id => "cover"), new_pledge_path) %>
 		<div class="pledge">
 			<%= link_to "Sponsor A School", new_pledge_path, class: "button blue_button", title: "Biggest Story Problem - Kickstarter Project" %>

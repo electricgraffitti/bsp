@@ -163,7 +163,7 @@ body {overflow: hidden;}
 
 .sponsor_header {font-size: 25px;}
 .sponsor_header span {color:#524D3D;}
-
+#disc {float:right;}
 .content {
 	position: relative;
 	float: left;
